@@ -27,32 +27,54 @@
 </head>
 
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="sidebar col-2">
-				<div class="sidebar-logo">
-					<img src="./img/Logotype.png" alt="" class="sidebar-logo__img">
+	<div class="page">
+		<div class="sidebar">
+			<div class="sidebar-logo">
+				<img src="./img/Logotype.png" alt="" class="sidebar-logo__img">
+			</div>
+			<div class="sidebar-menu">
+				<ul class="sidebar-menu__list">
+					<li class="sidebar-menu__item">
+						<a href="#" class="sidebar-menu__link">Аксессуары для ванных комнат, туалета и кухни</a>
+					</li>
+					<li class="sidebar-menu__item">
+						<a href="#" class="sidebar-menu__link">Хозяйственные товары</a>
+					</li>
+					<li class="sidebar-menu__item">
+						<a href="#" class="sidebar-menu__link">Средства детской безопасности</a>
+					</li>
+					<li class="sidebar-menu__item">
+						<a href="#" class="sidebar-menu__link">Аксессуары и запчасти для водоснабжения, канализации, отопления и
+							сантехники</a>
+					</li>
+				</ul>
+				<div class="sidebar-search">
+					<input type="text" class="sidebar-search__input" placeholder="Поиск">
+					<input type="button" class="sidebar-search__button" value="">
 				</div>
-				<div class="sidebar-menu">
-					<ul class="sidebar-menu__list">
-						<li class="sidebar-menu__item">
-							<a href="#" class="sidebar-menu__link">Аксессуары для ванных комнат, туалета и кухни</a>
-						</li>
-						<li class="sidebar-menu__item">
-							<a href="#" class="sidebar-menu__link">Хозяйственные товары</a>
-						</li>
-						<li class="sidebar-menu__item">
-							<a href="#" class="sidebar-menu__link">Средства детской безопасности</a>
-						</li>
-						<li class="sidebar-menu__item">
-							<a href="#" class="sidebar-menu__link">Аксессуары и запчасти для водоснабжения, канализации, отопления и
-								сантехники</a>
-						</li>
-					</ul>
+				<div class="sidebar-files">
+					<div class="sidebar-files-item">
+						<div class="sidebar-files-item__icon-block">
+							<img src="./img/rub_icon.png" class="sidebar-files-item__icon">
+						</div>
+						<div class="sidebar-files-item__text">
+							<span class="sidebar-files-item__title">Прайс-лист</span>
+							<span class="sidebar-files-item__file">.xlsx</span>
+						</div>
+					</div>
+					<div class="sidebar-files-item">
+						<div class="sidebar-files-item__icon-block">
+							<img src="./img/file_icon.png" class="sidebar-files-item__icon">
+						</div>
+						<div class="sidebar-files-item__text">
+							<span class="sidebar-files-item__title">Каталог товаров</span>
+							<span class="sidebar-files-item__file">.pdf</span>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="content col-10"></div>
 		</div>
+		<div class="content"></div>
 	</div>
 
 	<script src="js/scripts.min.js"></script>
