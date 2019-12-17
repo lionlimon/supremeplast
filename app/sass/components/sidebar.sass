@@ -5,17 +5,19 @@
 	grid-template-columns: 280px 1fr
 	
 .sidebar
-	background-color: #00617c
 	-ms-grid-column: 1
 	-ms-grid-row: 1
 	padding-bottom: 60px
+	background-color: #00617c
 	&-container
+		background-color: #00617c
 		padding-left: 30px
 		padding-right: 30px
 		width: 280px
 		position: fixed
 		top: 0
 		left: 0
+		height: 100vh
 	&-logo
 		width: 100%
 		padding-top: 32px
@@ -159,3 +161,5 @@
 @media (max-width: 1199px)
 	.sidebar
 		display: none
+	.page
+		display: block
