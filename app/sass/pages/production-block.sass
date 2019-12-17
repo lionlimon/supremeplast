@@ -1,0 +1,102 @@
+@import "../vars"
+
+.production-block
+	padding-right: 0
+	position: relative
+
+	&__title 
+		max-width: 685px
+		margin-bottom: 35px
+		
+	&__text
+		padding-left: 3px
+		max-width: 630px
+
+	&__more-about
+		position: absolute
+		right: 120px
+		top: 12px
+		display: inline-block
+		font-weight: bold
+		vertical-align: middle
+		font-size: 16px
+		color: #111
+
+		&-button
+			margin-left: 10px
+			transform: translateY(-1px)
+
+		&:hover
+			text-decoration: none
+			color: $text
+			
+			.production-block__more-about-text:after 
+				opacity: 0
+
+			.round-button 
+				background-color: #e4f3fc
+	
+
+	&__more-about-text
+		position: relative
+		&:after 
+			content: ''
+			height: 1px
+			width: 100%
+			background-color: rgba(#000, 0.2)
+			bottom: 2px
+			position: absolute
+			left: 0
+
+
+
+	&__info, &__img-wrap
+		display: inline-block
+	
+	&__img-wrap
+		max-width: 701px
+		transform: translate(-65px, 30px)
+	
+
+// Button
+.round-button	
+	width: 40px
+	height: 40px
+	vertical-align: middle
+	border: 1px solid #e4f3fc
+	border-radius: 50%
+	display: inline-block
+	text-align: center
+	position: relative
+	transition: background-color .25s
+	z-index: 2
+
+	&:hover
+		background-color: #e4f3fc
+		
+	&__img 
+		display: block
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+	
+
+@media screen and (max-width: 1800px)
+	.production-block
+		&__img-wrap
+			transform: translate(0, 0)
+			margin-top: 100px
+			max-width: 600px
+
+
+@media screen and (max-width: 1366px)
+	.production-block
+		&__img-wrap
+			transform: translate(0, 0)
+			margin-top: 100px
+			width: 511px
+
+	.production-block
+			padding-right: 27px
+
