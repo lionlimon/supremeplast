@@ -1,15 +1,15 @@
 .material
 	padding-top: 60px
-	padding-bottom: 60px
+	padding-bottom: 55px
 	&-block
 		background-image: url(../img/granul.png)
 		background-repeat: no-repeat
-		background-position: 36px 18px
+		background-position: 37px 18px
 		padding: 90px
 	&__img-block
 		display: inline-block
 		vertical-align: middle
-		padding-left: 92px
+		padding-left: 94px
 		max-width: 49%
 	&__img
 		max-width: 100%
@@ -17,14 +17,14 @@
 		display: inline-block
 		vertical-align: middle
 		padding-left: 85px
-		margin-top: 11px
+		margin-top: 10px
 		max-width: 49%
 	&__title
 		max-width: 380px
 		color: black
 		margin-left: 3px
 		line-height: 28px
-		margin-bottom: 10px
+		margin-bottom: 11px
 	&__name
 		font-size: 60px
 		line-height: 66px
@@ -34,12 +34,13 @@
 
 @media (min-width: 1200px) and (max-width: 1366px)
 	.material
+		padding-bottom: 50px
 		&-block
 			background-image: url(../img/granul_small.png)
 			background-position: 22px 0px
 			padding: 60px
 		&__img-block
-			padding-left: 83px
+			padding-left: 82px
 			max-width: 45%
 		&__img
 			max-width: 333px
@@ -60,6 +61,8 @@
 
 @media (min-width: 768px) and (max-width: 1199px)
 	.material
+		padding-left: 42px
+		padding-right: 42px
 		&-block
 			background-image: url(../img/granul_small.png)
 			background-size: contain
@@ -87,27 +90,36 @@
 
 @media (max-width: 768px)
 	.material
+		padding-left: 15px
+		padding-right: 15px
 		&-block
 			background-image: url(../img/granul_small.png)
 			background-size: contain
-			background-position: 10px
+			background-position: 0
 			padding: 60px
 		&__img-block
 			padding-left: 0px
-			max-width: 45%
+			max-width: 280px
+			display: block
+			margin: 0 auto
 		&__img
 			max-width: 100%
 		&__text
-			padding-left: 83px
-			margin-top: 6px
-			max-width: 50%
+			padding-left: 0px
+			display: block
+			margin-top: 40px
+			max-width: 100%
 		&__title
-			max-width: 380px
-			margin-left: 3px
+			max-width: 300px
 			line-height: 24px
+			margin: 0 auto
 			margin-bottom: 16px
-			font-size: 16px
+			font-size: 14px
 		&__name
-			font-size: 40px
-			line-height: 48px
+			max-width: 300px
+			font-size: 24px
+			line-height: 32px
 			font-weight: 600
+			margin: 0 auto
+			br
+				display: none
