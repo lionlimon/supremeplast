@@ -1,0 +1,106 @@
+.offers-slider
+
+	&__item
+		overflow: hidden
+		min-height: 495px
+		background-color: grey
+		width: 100%
+		position: relative
+		display: flex
+		padding-left: 80px
+		color: #fff
+		background-size: cover
+		background-position: top center
+
+	&__top, &__bottom
+		position: absolute
+		left: 80px
+	
+	&__top 
+		top: 1px
+
+	&__bottom
+		bottom: 35px
+		font-size: 16px
+	
+	&__content
+		margin-top: 120px		
+		max-width: 500px
+		z-index: 1
+
+	&__item-title
+		color: #fff
+		font-size: 36px
+
+	&__item-description 
+		margin: 20px 0
+		font-size: 16px
+
+	&__button
+		background-color: transparent
+		color: #fff
+		display: inline-block
+		font-weight: bold
+		vertical-align: middle
+		border-radius: 30px
+		border: 1px solid #fff
+		font-size: 16px
+		line-height: 50px
+		height: 50px
+		white-space: no-wrap
+		padding: 0 40px
+		
+		&:hover
+			text-decoration: none 
+			color: #fff
+
+	&__item-conditions
+		color: #b1d5dd
+		border-bottom: 1px dashed #b1d5dd
+
+		&:hover
+			text-decoration: none
+			color: #b1d5dd
+
+	&__item-time 
+		color: #b1d5dd
+		margin-left: 20px
+
+	&__item-discount
+		position: absolute	
+		right: 142px
+		z-index: 1	
+		top: 40px	
+		width: 216px
+		height: 216px
+		border-radius: 50% 50% 50% 0
+		background-color: #f33f27
+		padding-left: 47px	
+		padding-top: 60px			
+		color: #fff
+		font-size: 18px	
+
+	&__item-last-price		
+		font-size: 18px	
+		margin: 10px 0 0px 0
+
+	&__item-cur-price
+		font-size: 34px	
+
+	&__item-img
+		max-width: 384px
+		position: absolute
+		right: 306px
+		top: 90px
+		z-index: 0
+
+	&__item-type
+		width: 176px
+		height: 36px
+		//background-size: cover
+		text-align: center
+		background-image: url('../img/offers-type-back.png')
+		background-repeat: no-repeat
+		font-weight: bold
+		font-size: 16px
+		padding-top: 5px

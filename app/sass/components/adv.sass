@@ -7,11 +7,11 @@
 		margin-top: 71px
 		border: 4px solid #daeefb
 		border-radius: 0px 134px 0px 134px
-		padding: 68px 81px 68px 78px
+		padding: 68px 81px 68px 76px
 	&__title
 		display: inline-block
 		max-width: 400px
-		line-height: 1.45
+		line-height: 29px
 		margin-right: 21px
 		vertical-align: top
 
@@ -21,7 +21,7 @@
 		padding-left: 55px
 		max-width: 405px
 		&:last-child
-			padding-left: 45px
+			padding-left: 44px
 	&__item
 		font-family: Formular
 		font-weight: 300
@@ -31,13 +31,13 @@
 		background-position: 0 10px
 		padding-left: 26px
 		margin-bottom: 22px
+		letter-spacing: 0px
 
-@media (min-width: 1200px) and (max-width: 1680px)
+@media (max-width: 1850px)
 	.advantages
 		&-block
 			display: flex
 			justify-content: space-between
-			padding: 49px 95px 68px 57px
 		&__title
 			max-width: 300px
 			font-size: 18px
@@ -45,7 +45,7 @@
 		&__list
 			max-width: 29%
 			vertical-align: top
-			padding-left: 13px
+			padding-left: 0
 			margin-top: -1px
 			&:last-child
 				padding-left: 0
@@ -54,8 +54,39 @@
 			margin-bottom: 20px
 			line-height: 23px
 
+@media (max-width: 1480px)
+	.advantages
+		&-block
+			padding: 49px 57px 68px 57px
+
+@media (min-width: 1200px) and (max-width: 1366px)
+	.advantages
+		padding: 0 42px
+		&-block
+			margin-top: 55px
+			display: flex
+			justify-content: space-between
+			padding: 49px 57px 68px 57px
+		&__title
+			max-width: 300px
+			font-size: 18px
+			margin-right: 0
+		&__list
+			max-width: 29%
+			vertical-align: top
+			padding-left: 19px
+			margin-top: -1px
+			&:last-child
+				padding-left: 0
+				margin-right: 38px
+		&__item
+			font-size: 14px
+			margin-bottom: 20px
+			line-height: 23px
+
 @media (min-width: 768px) and (max-width: 1199px)
 	.advantages
+		padding: 0 42px
 		&-block
 			display: flex
 			height: auto
@@ -82,6 +113,7 @@
 		padding-left: 15px
 		padding-right: 15px
 		&-block
+			display: block
 			height: auto
 			padding: 49px 35px 49px 35px
 		&__title
