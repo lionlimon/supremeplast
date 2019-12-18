@@ -18,23 +18,28 @@
 	
 	&__top 
 		top: 1px
+		left: 30px
 
 	&__bottom
-		bottom: 35px
+		bottom: 36px
 		font-size: 16px
+		z-index: 1
 	
 	&__content
-		margin-top: 120px		
+		margin-top: 117px		
 		max-width: 500px
 		z-index: 1
 
 	&__item-title
 		color: #fff
 		font-size: 36px
+		font-weight: bold
 
 	&__item-description 
-		margin: 20px 0
+		margin: 10px 0 26px
 		font-size: 16px
+		max-width: 390px
+		line-height: 1.5
 
 	&__button
 		background-color: transparent
@@ -42,7 +47,7 @@
 		display: inline-block
 		font-weight: bold
 		vertical-align: middle
-		border-radius: 30px
+		border-radius: 35px
 		border: 1px solid #fff
 		font-size: 16px
 		line-height: 50px
@@ -57,40 +62,61 @@
 	&__item-conditions
 		color: #b1d5dd
 		border-bottom: 1px dashed #b1d5dd
-
+		position: relative
+		
 		&:hover
 			text-decoration: none
 			color: #b1d5dd
+		
+			.offers-slider__popup-mini
+				opacity: 1
+				visibility: visible
+				//transform: translateY(100%)
+
+
 
 	&__item-time 
 		color: #b1d5dd
-		margin-left: 20px
+		margin-left: 13px
 
 	&__item-discount
 		position: absolute	
-		right: 142px
+		right: 8.9%
 		z-index: 1	
-		top: 40px	
+		top: 36px	
 		width: 216px
 		height: 216px
 		border-radius: 50% 50% 50% 0
 		background-color: #f33f27
 		padding-left: 47px	
-		padding-top: 60px			
+		padding-top: 66px			
 		color: #fff
 		font-size: 18px	
 
 	&__item-last-price		
 		font-size: 18px	
-		margin: 10px 0 0px 0
+		position: relative
+		margin: 12px 0 0px 0
+
+		&:after
+			content: ''
+			height: 1px
+			width: 55px
+			background-color: #000
+			transform: rotate(-20deg)
+			position: absolute
+			left: -2px
+			top: 12px
 
 	&__item-cur-price
 		font-size: 34px	
+		line-height: 1
+		letter-spacing: 1px
 
 	&__item-img
 		max-width: 384px
 		position: absolute
-		right: 306px
+		right: 21%
 		top: 90px
 		z-index: 0
 
@@ -101,6 +127,30 @@
 		text-align: center
 		background-image: url('../img/offers-type-back.png')
 		background-repeat: no-repeat
-		font-weight: bold
+		font-weight: 500
 		font-size: 16px
 		padding-top: 5px
+
+
+	&__popup-mini
+		opacity: 0
+		transition: all .25s
+		position: absolute
+		top: 0
+		left: 0
+		transform: translateY(calc(-100% - 18px))
+		visibility: hidden
+		width: 300px
+
+// poup-mini
+
+.popup-mini
+	padding: 30px 30px 30px 30px
+	background-color: #fff
+	max-width: 320px
+	color: #000
+	
+	&__title
+		font-size: 16px
+		font-weight: bold
+		margin-bottom: 10px
