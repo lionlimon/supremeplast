@@ -116,3 +116,43 @@
 			&-text
 				font-size: 14px
 
+@media screen and (max-width: 1266px)
+	.production-block
+		&__title, &__text
+			max-width: 100%
+
+		&__info
+			max-width: 460px
+
+		&__img-wrap 
+			max-width: 400px
+			transform: translate(0, 0)
+
+@media screen and (max-width: 976px)
+	.production-block
+		&__title, &__text, &__info
+			max-width: 100%
+
+		&__img-wrap
+			padding-left: 25px
+			max-width: 100%
+			margin: 0 auto
+			margin-bottom: 30px
+
+		&__img 
+			margin: 0 auto
+			display: block
+		
+@media screen and (max-width: 548px)
+	.production-block 
+		&__more-about
+			top: -50px
+			left: 15px
+
+			&-button 
+				width: 45px
+				height: 45px
+				border: 2px solid #e4f3fc
+
+		&__img-wrap
+			margin-top: 40px
