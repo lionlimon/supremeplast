@@ -131,10 +131,10 @@ document.addEventListener('DOMContentLoaded', function(){
 	})
 	arrows.forEach(function(el, index){
 		el.addEventListener('mouseup', function(){
-			resetall();
 			var navit = this.closest('.main-header__nav-item');
 			if(navit.querySelector('.main-header__frst-sub-menu')){
 				if(navit.querySelector('.main-header__frst-sub-menu').style.display != 'block'){
+					resetall();
 					navit.querySelector('.main-header__frst-sub-menu').style.display = 'block';
 					el.classList.add('active');
 					if(!navit.querySelector('.main-header__nav-item-link').classList.contains('main-header__frst-sub-menu-item-link')){
@@ -150,10 +150,10 @@ document.addEventListener('DOMContentLoaded', function(){
 	})
 	arrowsfrstsub.forEach(function(el, index){
 		el.addEventListener('mouseup', function(){
-			resetscndsublist();
 			var navit = this.closest('.main-header__nav-item');
 			if(navit.querySelector('.main-header__sec-sub-menu')){
 				if(navit.querySelector('.main-header__sec-sub-menu').style.display != 'block'){
+					resetscndsublist();
 					navit.querySelector('.main-header__sec-sub-menu').style.display = 'block';
 					el.classList.add('active');
 					navit.querySelector('.main-header__nav-item-link').classList.add('active');
