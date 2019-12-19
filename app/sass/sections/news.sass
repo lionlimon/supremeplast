@@ -3,6 +3,9 @@
 	padding-right: 100px
 	padding-top: 0
 	padding-bottom: 145px
+	&-slide
+		&-prev
+			overflow: hidden
 	&_popular
 		padding-bottom: 0
 	&-title
@@ -27,6 +30,9 @@
 			position: absolute
 			top: 7px
 			right: 25px
+			&__icon
+				path
+					fill: black
 			&__prev, &__next
 				border: none
 				background: none
@@ -37,7 +43,8 @@
 				cursor: pointer
 				transition-duration: .3s
 				&:hover
-					fill: #1a8ea5
+					path
+						fill: #1a8ea5
 				&:focus
 					outline: none
 			&__prev
@@ -124,6 +131,8 @@
 			width: 15px
 			margin: 0 auto
 			display: block
+			path
+				fill: black
 
 @media (max-width: 1600px)
 	.news
@@ -137,9 +146,11 @@
 @media (max-width: 1366px)
 	.news
 		padding-top: 0
-		padding-bottom: 108px
-		padding-left: 42px
-		padding-right: 42px
+		padding-bottom: 110px
+		padding-left: 22px
+		padding-right: 22px
+		&_popular
+			padding-bottom: 0
 		&-title
 			&__text
 				font-size: 36px
@@ -149,13 +160,13 @@
 		&-slider
 			&-nav
 				position: absolute
-				top: 7px
-				right: 25px
+				top: 10px
+				right: 20px
 				&__icon
 					width: 31px
 					height: 24px
 				&__prev
-					margin-right: 27px
+					margin-right: 24px
 		&-item
 			&__bottom
 				margin-top: 116px
@@ -189,13 +200,7 @@
 				font-weight: 600
 				letter-spacing: 0px
 		&-all-items
-			margin-top: 15px
-			max-width: 180px
-			padding-left: 10px
-			padding-right: 10px
-			&_popular
-				max-width: 156px
-				margin-top: 12px
+			margin-top: 40px
 			&__text
 				font-size: 14px
 				margin-left: 5px
@@ -207,6 +212,9 @@
 	.news
 		padding-left: 42px
 		padding-right: 42px
+		&-slider
+			padding-left: 0
+			padding-right: 0
 		&-item
 			&__bottom
 				margin-top: 116px
@@ -253,10 +261,20 @@
 				top: 10px
 				margin: 0 auto
 		&-all-items
-			margin-top: 0px
+			margin-top: 10px
 
 @media (max-width: 540px)
 	.news
+		padding-bottom: 0px
+		&_popular
+			padding-bottom: 0
+		&-title
+			&__text
+				font-size: 18px
+				margin-left: 0
+			&__img
+				margin-top: -3px
+				max-width: 30px
 		&-item
 			&__bottom
 				margin-top: 135px
@@ -271,3 +289,10 @@
 		&-slider
 			&-nav
 				display: none
+
+@media (max-width: 355px)
+	.news
+		&-title
+			&__img
+				&_hide
+					display: none

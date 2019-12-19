@@ -1,0 +1,80 @@
+.footer
+	padding-bottom: 120px
+	padding-top: 25px
+	&-menu
+		background-color: #f0f8fd
+		padding-top: 72px
+		padding-left: 120px
+		padding-right: 112px
+		&__block
+			&_right
+				margin-left: auto
+		&__title
+			font-weight: 600
+			font-size: 16px
+			line-height: 24px
+			color: #111111
+			margin-bottom: 19px
+			&:hover
+				color: #1a8ea5
+		&__list
+			padding-left: 0
+			list-style-type: none
+			margin-bottom: 0
+			&_sub
+				padding-left: 20px
+				padding-top: 20px
+		&__item
+			margin-bottom: 20px
+		&__link
+			color: #111111
+			font-weight: 300
+			font-size: 16px
+			line-height: 22px
+			&:hover
+				color: #9ca1a4
+				text-decoration: none
+
+@media (max-width: 1366px)
+	.footer
+		&-menu
+			padding-left: 42px
+			padding-right: 42px
+			&__title
+				font-size: 14px
+				line-height: 24px
+			&__link
+				font-size: 14px
+				line-height: 20px
+
+@media (max-width: 991px)
+	.footer
+		padding-top: 0
+		&-menu
+			&__list
+				margin-bottom: 45px
+				&_sub
+					margin-bottom: 20px
+
+@media (max-width: 767px)
+	.footer
+		&-menu
+			&__block
+				text-align: center
+			&__title
+				position: relative
+				display: inline-block
+				&_angle
+					&::after
+						content: ""
+						display: inline-block
+						position: absolute
+						border: 5px solid transparent
+						border-top: 5px solid #000
+						right: -20px
+						top: 12px
+			&__list
+				text-align: center
+				display: none
+				&_sub
+					display: block
