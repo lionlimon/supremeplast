@@ -1,8 +1,10 @@
 .offers-slider
+	
 
 	&__item
+		margin-bottom: 60px
 		overflow: hidden
-		min-height: 495px
+		min-height: 595px
 		background-color: grey
 		width: 100%
 		position: relative
@@ -89,6 +91,7 @@
 		border-radius: 50% 50% 50% 0
 		background-color: #f33f27
 		padding-left: 47px	
+		box-sizing: border-box
 		padding-top: 66px			
 		color: #fff
 		font-size: 18px	
@@ -141,6 +144,25 @@
 		transform: translateY(calc(-100% - 18px))
 		visibility: hidden
 		width: 300px
+	
+	.swiper-pagination
+		bottom: 0
+		text-align: center
+	.swiper-pagination-bullet
+		width: 4px
+		height: 4px
+		background-color: #000
+		margin: 0 15px
+		display: inline-block
+		transition: all .25s
+		opacity: 1
+
+		//display: inline-block
+		&-active
+			transform: scale(2)
+			opacity: 1
+
+	
 
 // poup-mini
 
@@ -154,3 +176,122 @@
 		font-size: 16px
 		font-weight: bold
 		margin-bottom: 10px
+
+@media screen and (max-width: 1366px)
+	.offers-slider
+		&__content
+				margin-top: 80px
+				position: relative
+				z-index: 99
+		
+		&__bottom
+			bottom: 23px
+			left: 62px
+
+		&__item
+			min-height: 380px
+			padding-left: 62px
+			margin-bottom: 46px
+			
+			&-img
+				top: 65px
+				right: 18.5%
+				max-width: 344px
+
+			&-type
+				display: none
+
+			&-title
+				font-size: 24px
+
+			&-description
+				font-size: 14px
+				line-height: 1.7
+				margin-top: 16px
+				margin-bottom: 25px
+
+			&-conditions, &-time
+				font-size: 14px
+				letter-spacing: -0.2px
+
+			&-time
+				margin-left: 15px
+
+			&-discount
+				box-sizing: border-box
+				width: 177px
+				height: 177px
+				padding-left: 42px
+				font-size: 16px
+				top: 33px
+				right: 95px
+				padding-top: 42px
+			
+			&-last-price
+				margin-bottom: 
+				margin-top: 10px	
+		
+			&-cur-price
+				font-size: 30px
+
+		
+@media screen and (max-width: 767px)
+
+	.offers-slider 
+		&__item 
+
+			&-discount
+				right: 360px
+				top: 20px
+				border-radius: 50% 50% 0 50%
+				height: 150px
+				width: 150px
+				padding: 20px
+				font-size: 15px
+				padding-left: 30px
+				padding-top: 30px
+			&-img
+				right: 70px
+
+			
+
+		&__content
+			position: absolute
+			bottom: 0
+			left: 0
+			max-width: 100%
+			width: 100%
+			padding: 10px 20px 15px
+			background-color: rgba(#fff, 0.4)	
+
+		&__bottom
+			display: none
+
+@media screen and (max-width: 491px)
+	.offers-slider 
+		&__item 
+			&-discount
+				border-radius: 50%
+				left: 5px
+				top: 5px
+				right: auto
+				width: 100px
+				padding: 15px 0 0 22px 
+				height: 100px
+				font-size: 11px
+
+			&-discount-perc
+				display: none
+
+			&-last-price 
+
+			&-cur-price
+				font-size: 18px
+				font-weight: bold
+
+			&-img 
+				max-width: 300px
+				top: 10px
+				left: 15px
+				right: auto
+

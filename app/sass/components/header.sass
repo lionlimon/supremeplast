@@ -3,6 +3,14 @@
 	color: white
 	padding-top: 27px
 	position: relative
+	&__overlay-for-menu
+	    width: 100%
+	    height: 100%
+	    background-color: rgba(0,0,0,0.8)
+	    position: fixed
+	    top: 0
+	    left: 0
+	    display: none
 	&__nav-wrap
 	&__nav-list
 		margin: 0
@@ -10,31 +18,90 @@
 		padding: 0
 		display: flex
 		flex-direction: row
+	&__frst-sub-menu
+		display: block
+		visibility: hidden	
+		padding: 0
+		position: absolute
+		&-wrap
+			padding: 20px 0px
+			background-color: #f33f27
+			margin-top: 9px
+		&-item
+			margin-right: 0
+			cursor: pointer
+			&-arrow
+				position: absolute
+				right: 28px
+				top: 9px
+				cursor: pointer
+				transform: rotate(-90deg)
+			&-link
+				display: block
+				padding-top: 4px
+				padding-bottom: 4px
+				padding-left: 28px
+				padding-right: 65px
+				font-weight: 100
+				font-size: 16px
+				letter-spacing: 0px
+				color: white
+				position: relative
+				&:hover
+					background-color: #d53722
+					color: white
+					text-decoration: none
+	&__sec-sub-menu
+		display: block	
+		visibility: hidden	
+		position: absolute
+		top: -20px
+		padding: 20.2px 0px
+		right: -261px
+		background-color: #a42b1a
+		&-wrap
+		&-item
+			margin-right: 0
+			cursor: pointer
+			&-link
+				padding: 3.9px 29px
+				display: block
+				letter-spacing: -.2px
+				&:after
+					margin-left: 27px
+					transform: rotate(-90deg)
+				&:hover
+					background-color: #d53722
+					color: white
+					text-decoration: none
+			&-arrow
+				position: absolute
+				right: -15px
+				top: 4px
 	&__nav-item
 		font-family: 'Formular'
 		list-style: none
 		font-size: 16px
 		letter-spacing: .4px
 		z-index: 2
-		&:not(:last-child)
-			margin-right: 20px
-		&:after
-			content: ""
-			width: 10px
-			height: 10px
-			display: inline-block
-			background-image: url('../../img/nav-arrow.png')
-			background-repeat: no-repeat
-			background-position: center 65%
-			margin-left: 3px
+		position: relative
+		&:not(:last-child):not(.main-header__frst-sub-menu-item):not(.main-header__sec-sub-menu-item)
+			margin-right: 33px
 		&-link
-			color: white
-			&:hover
+			color: white			
+			&:not(.main-header__frst-sub-menu-item-link):not(.main-header__sec-sub-menu-item-link):hover
 				color: #80999f
 				text-decoration: none
-	.container
+		&-arrow
+			position: absolute
+			right: -15px
+			top: 4px
+			cursor: pointer
+	&__con
 		max-width: 1400px
 		padding: 0
+	&__slider-con
+		max-width: 1400px
 	&__phone-email
 		display: flex
 		justify-content: flex-end
@@ -60,6 +127,7 @@
 		z-index: 2
 	&__order-call
 		border: 1px solid white
+		white-space: nowrap
 		height: 84%
 		width: 106%
 		margin-left: -10px
@@ -90,6 +158,8 @@
 			line-height: 66px
 			margin-top: -10px
 			margin-bottom: 50px
+			color: white
+			margin-top: 262px
 		&-button
 			max-width: 231px
 			height: 52px
@@ -108,9 +178,207 @@
 				background-color: #1a8ea5
 				border-color: #1a8ea5
 				text-decoration: none
-		.owl-item div, .owl-stage-outer, .owl-stage, .owl-item
-			height: 100%
-		.owl-item div
-			display: flex
+		&-con
+			max-width: 1400px
+	&-nav__prev
+		&-wrap
+		    position: absolute
+		    top: 326px
+		    z-index: 2
+		&-arrow
+			position: absolute
+			top: 113px
+			left: 13px		    
+	&-nav__next    
+		&-wrap
+		    position: absolute
+		    top: 326px
+		    right: 0
+		    z-index: 2
+		&-arrow
+			position: absolute
+			top: 113px
+			left: 19px
+	&__swiper-pagination
+		bottom: 33px
+		font-family: "Formular"
+		font-size: 15px
+		z-index: 323
+		position: absolute
+		width: 92.5%
+		text-align: right
+
+@media screen and (max-width: 1700px)
+	.main-header
+		&__con
+			padding: 0 15px
+		&__slider-con
+			max-width: 1140px
+
+@media screen and (max-width: 1550px)
+	.main-header
+		&__slider-con
+			margin-left: 40px
+
+
+@media screen and (max-width: 1500px)
+	.main-header
+		&__con
+			padding: 0 15px
+		&__order-call
+			width: 118%
+			margin-left: -15px
+
+@media screen and (max-width: 1300px)
+	.main-header
+		&__con
+			padding: 0 15px
+		&__order-call
+			width: 140%
+			margin-left: -33px
+
+@media screen and (max-width: 1199px)
+	.main-header
+		&__con
+			padding: 0 15px
+		&__slider-con
+			max-width: 960px
+			margin-left: auto
+			margin-right: auto
+		&__order-call
+			width: 100%
+			margin-left: 0px
+			&-wrap
+				display: flex
+				justify-content: center
+				align-items: center
+				padding-right: 15px
+				padding-left: 0
+		&__phone-email
+			padding-right: 0px
+		&__slider-title
+			max-width: 674px
+			font-size: 42px
+			line-height: 50px
+		&__nav-list
 			flex-direction: column
-			justify-content: center
+			width: 70%
+			margin: auto
+			&-wrap
+				position: fixed
+				top: 0
+				left: -280px
+				background-color: #00617c
+				width: 280px
+				height: 100%
+				margin-top: 0
+				z-index: 99999
+		&__nav-item:not(:last-child):not(.main-header__frst-sub-menu-item):not(.main-header__sec-sub-menu-item)
+			margin-right: 0px 
+		&__nav-item
+			position: relative
+			margin-right: 0px 
+			margin-bottom: 15px
+			&-link
+				&:after
+					right: 0
+					position: absolute
+		&__frst-sub-menu
+			display: none
+			width: 100%
+			padding: 0
+			position: initial
+			&-wrap
+				padding: 0
+				background-color: transparent
+			&-item
+				margin-bottom: 12px
+				padding: 0 27px
+				padding-right: 0
+				line-height: 16px
+				&:last-child
+					margin-bottom: -2px
+				&-arrow
+					transform: rotate(0deg)
+					top: 0
+					right: -15px
+				&-link
+					padding: 2px 0px
+					display: inline
+					&:hover
+						color: #809aa1
+						background-color: transparent
+					&:after
+						position: absolute
+						top: 37%
+						right: 0
+						transform: rotate(0deg)
+		&__sec-sub-menu
+			display: none	
+			position: initial
+			padding: 15px 0px
+			background-color: transparent
+			width: 100%
+			padding-left: 33px
+			padding-bottom: 3px
+			&-wrap
+			&-item
+				margin-right: 0
+				cursor: pointer
+				margin-bottom: 12px
+				padding: 0px 29px
+				padding-left: 0
+				&-link
+					padding: 0
+					line-height: 20px
+					display: inline
+					letter-spacing: -.2px
+					&:after
+						margin-left: 27px
+						transform: rotate(-90deg)
+					&:hover
+						color: #809aa1
+						text-decoration: none
+						background-color: transparent
+
+		&__logo
+			margin-bottom: 50px
+			margin-top: 15px
+			&-img
+				display: block
+				max-width: 100%
+				margin: auto
+			&-link
+				margin: auto
+				
+
+@media screen and (max-width: 1199px)
+	.main-header
+		&__slider-con
+			max-width: 720px
+
+@media screen and (max-width: 767px)
+	.main-header
+		&__slider-title
+			max-width: 674px
+			font-size: 37px
+			line-height: 41px
+		&__slider-con
+			max-width: 540px
+
+@media screen and (max-width: 640px)
+	.main-header
+		&-nav__next-wrap
+			display: none
+		&-nav__prev-wrap
+			display: none
+
+@media screen and (max-width: 560px)
+	.main-header
+		&__slider-con
+			max-width: 400px
+
+@media screen and (max-width: 420px)
+	.main-header
+		&__slider-con
+			max-width: 270px

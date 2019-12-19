@@ -1,99 +1,148 @@
-$(function () {
+document.addEventListener('DOMContentLoaded', function(){
+	
 
 
-	$(".main-header__slider").owlCarousel({
-		items: 1,
-		nav: true,
-		autoplay: true,
-		autoplayTimeout: 3000,
-		loop: true,
+
+//Сладейр под меню
+
+
+//Меню
+	var navit = document.querySelectorAll('.main-header__nav-item');
+	var frstsublist = document.querySelectorAll('.main-header__frst-sub-menu-item');
+	frstsublist.forEach(function(el, index) {
+		setTimeout(function(){
+			if(el.querySelector('.main-header__sec-sub-menu')){
+				var wdth = el.querySelector('.main-header__sec-sub-menu').offsetWidth;
+				el.querySelector('.main-header__sec-sub-menu').style.display = 'none';
+				el.querySelector('.main-header__sec-sub-menu').style.right = '-' + wdth + 'px';
+				el.querySelector('.main-header__sec-sub-menu').style.visibility = 'visible';
+				// this.querySelector('.main-header__sec-sub-menu').style.right = '-' + wdth + 'px';
+				}
+		}, 300)
+			
+				if(el.querySelector('.main-header__sec-sub-menu')){
+				el.addEventListener('mouseover', function(){
+
+			if(this.querySelector('.main-header__sec-sub-menu')){
+				
+				if(document.body.clientWidth > 1199){
+					this.querySelector('.main-header__sec-sub-menu').style.display = 'block';
+				}
+			}
+			})
+			el.addEventListener('mouseout', function(){
+				if(this.querySelector('.main-header__sec-sub-menu')){
+					this.querySelector('.main-header__sec-sub-menu').style.display = 'none';
+				}
+			})
+				}
+				// console.log(this.querySelector('.main-header__frst-sub-menu'));
+			})
+	navit.forEach(function(el, index) {
+		setTimeout(function(){
+		if(el.querySelector('.main-header__frst-sub-menu')){
+			el.querySelector('.main-header__frst-sub-menu').style.display = 'none';
+			el.querySelector('.main-header__frst-sub-menu').style.visibility = 'visible';
+		}
+		}, 300)
+			el.addEventListener('mouseover', function(){
+		// console.log(navit);
+		// var aa = this.querySelectorAll('.main-header__frst-sub-menu')[0];
+			if(this.querySelector('.main-header__frst-sub-menu')){
+				if(document.body.clientWidth > 1199){
+					this.querySelector('.main-header__frst-sub-menu').style.display = 'block';
+				}
+			}
+			// console.log(this.querySelector('.main-header__frst-sub-menu'));
+		})
+		el.addEventListener('mouseout', function(){
+			if(this.querySelector('.main-header__frst-sub-menu')){
+				this.querySelector('.main-header__frst-sub-menu').style.display = 'none';
+			}
+		})
 	});
 
-	$(".news-owl").owlCarousel({
-		responsive: {
-			0: {
-				items: 1,
-				slideBy: 1,
-				margin: 30
-			},
-			541: {
-				items: 2,
-				slideBy: 2,
-				margin: 30
-			},
-			1367: {
-				items: 2,
-				slideBy: 2,
-				margin: 40
-			},
-		},
-		nav: true,
-		loop: true,
-		navContainerClass: "news-slider-nav",
-		navClass: ["news-slider-nav__prev", "news-slider-nav__next"],
-		navText: [`<svg class="news-slider-nav__icon" xmlns="http://www.w3.org/2000/svg" width="36.09" height="29.21" viewBox="0 0 36.09 29.21">
-								<metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-								<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
-									<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-											<rdf:Description rdf:about=""/>
-									</rdf:RDF>
-								</x:xmpmeta>
-								<?xpacket end="w"?></metadata>
-								<defs>
-									<style>
-										.cls-1 {
-											fill-rule: evenodd;
-										}
-									</style>
-								</defs>
-								<path id="Влево" class="cls-1" d="M1698,2814h36v1h-36v-1Zm-0.11.5,14.61-14.61,0.71,0.71-14.61,14.6Zm0,0,0.71-.71,14.61,14.61-0.71.7Z" transform="translate(-1697.91 -2799.88)"/>
-							</svg>`,
-			`<svg class="news-slider-nav__icon" xmlns="http://www.w3.org/2000/svg" width="36" height="29.03" viewBox="0 0 36 29.03">
-								<metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-								<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
-									<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-											<rdf:Description rdf:about=""/>
-									</rdf:RDF>
-								</x:xmpmeta>
-								<?xpacket end="w"?></metadata>
-								<defs>
-									<style>
-										.cls-1 {
-											fill-rule: evenodd;
-										}
-									</style>
-								</defs>
-								<path id="Вправо" class="cls-1" d="M1799.91,2814.99H1764V2814h35.91v0.99Zm0.1-.49-14.56,14.51-0.71-.7,14.57-14.51Zm0,0-0.7.69-14.57-14.51,0.71-.7Z" transform="translate(-1764 -2799.97)"/>
-							</svg>`],
-	});
 
+
+	$(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $(".main-header__nav-list-wrap"); // тут указываем ID элемента
+		if($(".main-header__nav-list-wrap").css('left') == '0px'){
+			console.log($(".main-header__nav-list-wrap").css('left'));
+			if (!div.is(e.target) // если клик был не по нашему блоку
+					&& div.has(e.target).length === 0) { // и не по его дочерним элементам
+				div.css('left', '-280px'); // скрываем его
+				$('.main-header__overlay-for-menu').hide();
+			}
+		}
 });
-var newsSwiper = new Swiper('.news-slider', {
-	spaceBetween: 40,
-	slidesPerView: 2,
-	slidePrevClass: "news-slider-nav__prev",
-	slideNextClass: "news-slider-nav__next"
+
+
+
+
+if (document.getElementsByClassName('news-slider')) {
+	var newsSwiper = new Swiper('.news-slider', {
+		slidesPerView: 2,
+		spaceBetween: 40,
+		slidesPerGroup: 2,
+		loop: true,
+		navigation: {
+			nextEl: `.news-slider-nav__next`,
+			prevEl: `.news-slider-nav__prev`
+		},
+		breakpoints: {
+			541: {
+				slidesPerView: 1,
+				spaceBetween: 15,
+				slidesPerGroup: 1
+			}
+		},
+	});
+
+}
+
+if (document.getElementsByClassName('offers-slider')) {
+	var offersSwiper = new Swiper('.offers-slider', {
+		spaceBetween: 0,
+		loop: true,
+		navigation: {
+			nextEl: `.offers-slider-nav__next`,
+			prevEl: `.offers-slider-nav__prev`
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+		},
+		// breakpoints: {
+		// 	541: {
+		// 		slidesPerView: 1,
+		// 		spaceBetween: 15,
+		// 		slidesPerGroup: 1
+		// 	}
+		// },
+	});
+
+}
+
+var headerSwiper = new Swiper('.main-header__slider', {
+	slidesPerView: 1,
+	loop: true,
+	pagination: {
+		el: '.main-header__swiper-pagination',
+		type: 'fraction',
+	},
+	navigation: {
+			nextEl: '.main-header-nav__next',
+			prevEl: '.main-header-nav__prev'
+		}
+})
+
+document.querySelector('.main-header-nav__next-arrow').addEventListener('click', function(){
+	headerSwiper.slideNext();
+})
+
+document.querySelector('.main-header-nav__prev-arrow').addEventListener('click', function(){
+	headerSwiper.slidePrev();
 })
 
 
-
-if (document.getElementsByClassName('offers-slider')) {
-  var offersSwiper = new Swiper('.offers-slider', {
-    slidesPerView: 2,
-    spaceBetween: 40,
-    slidesPerGroup: 2,
-    loop: true,
-    navigation: {
-      nextEl: '.news-slider-nav__next',
-      prevEl: '.news-slider-nav__prev'
-    },
-    breakpoints: {
-      541: {
-        slidesPerView: 1,
-        spaceBetween: 15,
-        slidesPerGroup: 1
-      }
-    },
-  });
-  alert('Слайдер создан');
-}
+});
