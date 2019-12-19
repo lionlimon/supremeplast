@@ -212,6 +212,9 @@
 	.news
 		padding-left: 42px
 		padding-right: 42px
+		&-slider
+			padding-left: 0
+			padding-right: 0
 		&-item
 			&__bottom
 				margin-top: 116px
@@ -258,10 +261,20 @@
 				top: 10px
 				margin: 0 auto
 		&-all-items
-			margin-top: 0px
+			margin-top: 10px
 
 @media (max-width: 540px)
 	.news
+		padding-bottom: 0px
+		&_popular
+			padding-bottom: 0
+		&-title
+			&__text
+				font-size: 18px
+				margin-left: 0
+			&__img
+				margin-top: -3px
+				max-width: 30px
 		&-item
 			&__bottom
 				margin-top: 135px
@@ -276,3 +289,10 @@
 		&-slider
 			&-nav
 				display: none
+
+@media (max-width: 355px)
+	.news
+		&-title
+			&__img
+				&_hide
+					display: none
