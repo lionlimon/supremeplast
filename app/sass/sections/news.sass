@@ -2,7 +2,9 @@
 	padding-left: 100px
 	padding-right: 100px
 	padding-top: 0
-	padding-bottom: 143px
+	padding-bottom: 145px
+	&_popular
+		padding-bottom: 0
 	&-title
 		&__text
 			display: inline-block
@@ -24,7 +26,7 @@
 		&-nav
 			position: absolute
 			top: 7px
-			right: 5px
+			right: 25px
 			&__prev, &__next
 				border: none
 				background: none
@@ -82,22 +84,19 @@
 			background-repeat: no-repeat
 	&-all-items
 		display: block
-		margin: 0 auto
-		max-width: 200px
+		text-align: center
 		padding-left: 15px
 		padding-right: 15px
 		margin-top: 57px
 		padding-top: 2px
-		border: 1px solid white
-		border-radius: 30px
 		transition-duration: .3s
 		&:hover
 			text-decoration: none
-			border-color: rgba(0, 0, 0, .2)
 			.news-all-items__icon-block
 				border-color: transparent
 			.news-all-items__text
 				border-color: transparent
+				color: #1a8ea5
 		&__text
 			display: inline-block
 			vertical-align: middle
@@ -110,6 +109,7 @@
 			font-family: Formular
 			margin-top: -4px
 			transition-duration: .3s
+			margin-left: -1px
 		&__icon-block
 			width: 41px
 			height: 41px
@@ -264,6 +264,8 @@
 				width: 210px
 				height: 130px
 		&-slider
+			padding-left: 0
+			padding-right: 0
 			&-nav
 				display: none
 		&-slider
