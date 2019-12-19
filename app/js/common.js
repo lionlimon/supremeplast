@@ -79,17 +79,23 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
-if (document.getElementsByClassName('news-slider')) {
+if (document.getElementsByClassName('news-slider').length > 0) {
 	var newsSwiper = new Swiper('.news-slider', {
 		slidesPerView: 2,
 		spaceBetween: 40,
 		slidesPerGroup: 2,
 		loop: true,
+		slidePrevClass: 'news-slide-prev',
 		navigation: {
 			nextEl: `.news-slider-nav__next`,
 			prevEl: `.news-slider-nav__prev`
 		},
 		breakpoints: {
+			1366: {
+				slidesPerView: 2,
+				spaceBetween: 30,
+				slidesPerGroup: 2
+			},
 			541: {
 				slidesPerView: 1,
 				spaceBetween: 15,
@@ -97,28 +103,6 @@ if (document.getElementsByClassName('news-slider')) {
 			}
 		},
 	});
-	alert('Слайдер создан');
-}
-
-if (document.getElementsByClassName('offers-slider')) {
-	var offersSwiper = new Swiper('.offers-slider', {
-		slidesPerView: 2,
-		spaceBetween: 40,
-		slidesPerGroup: 2,
-		loop: true,
-		navigation: {
-			nextEl: `.news-slider-nav__next`,
-			prevEl: `.news-slider-nav__prev`
-		},
-		breakpoints: {
-			541: {
-				slidesPerView: 1,
-				spaceBetween: 15,
-				slidesPerGroup: 1
-			}
-		},
-	});
-	alert('Слайдер создан');
 }
 
 var headerSwiper = new Swiper('.main-header__slider', {
