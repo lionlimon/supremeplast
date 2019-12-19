@@ -74,3 +74,26 @@ var newsSwiper = new Swiper('.news-slider', {
 	slidePrevClass: "news-slider-nav__prev",
 	slideNextClass: "news-slider-nav__next"
 })
+
+
+
+if (document.getElementsByClassName('offers-slider')) {
+  var offersSwiper = new Swiper('.offers-slider', {
+    slidesPerView: 2,
+    spaceBetween: 40,
+    slidesPerGroup: 2,
+    loop: true,
+    navigation: {
+      nextEl: '.news-slider-nav__next',
+      prevEl: '.news-slider-nav__prev'
+    },
+    breakpoints: {
+      541: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        slidesPerGroup: 1
+      }
+    },
+  });
+  alert('Слайдер создан');
+}
