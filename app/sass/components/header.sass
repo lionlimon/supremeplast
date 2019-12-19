@@ -159,6 +159,7 @@
 			margin-top: -10px
 			margin-bottom: 50px
 			color: white
+			margin-top: 262px
 		&-button
 			max-width: 231px
 			height: 52px
@@ -177,17 +178,48 @@
 				background-color: #1a8ea5
 				border-color: #1a8ea5
 				text-decoration: none
-		.owl-item div, .owl-stage-outer, .owl-stage, .owl-item
-			height: 100%
-		.owl-item div
-			display: flex
-			flex-direction: column
-			justify-content: center
+		&-con
+			max-width: 1400px
+	&-nav__prev
+		&-wrap
+		    position: absolute
+		    top: 326px
+		    z-index: 2
+		&-arrow
+			position: absolute
+			top: 113px
+			left: 13px		    
+	&-nav__next    
+		&-wrap
+		    position: absolute
+		    top: 326px
+		    right: 0
+		    z-index: 2
+		&-arrow
+			position: absolute
+			top: 113px
+			left: 19px
+	&__swiper-pagination
+		bottom: 33px
+		font-family: "Formular"
+		font-size: 15px
+		z-index: 323
+		position: absolute
+		width: 92.5%
+		text-align: right
 
 @media screen and (max-width: 1700px)
 	.main-header
 		&__con
 			padding: 0 15px
+		&__slider-con
+			max-width: 1140px
+
+@media screen and (max-width: 1550px)
+	.main-header
+		&__slider-con
+			margin-left: 40px
+
 
 @media screen and (max-width: 1500px)
 	.main-header
@@ -211,6 +243,8 @@
 			padding: 0 15px
 		&__slider-con
 			max-width: 960px
+			margin-left: auto
+			margin-right: auto
 		&__order-call
 			width: 100%
 			margin-left: 0px
@@ -331,3 +365,20 @@
 			line-height: 41px
 		&__slider-con
 			max-width: 540px
+
+@media screen and (max-width: 640px)
+	.main-header
+		&-nav__next-wrap
+			display: none
+		&-nav__prev-wrap
+			display: none
+
+@media screen and (max-width: 560px)
+	.main-header
+		&__slider-con
+			max-width: 400px
+
+@media screen and (max-width: 420px)
+	.main-header
+		&__slider-con
+			max-width: 270px

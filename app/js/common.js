@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	
 
 
+
 //Сладейр под меню
 
 
@@ -62,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	});
 
 
+
 	$(document).mouseup(function (e){ // событие клика по веб-документу
 		var div = $(".main-header__nav-list-wrap"); // тут указываем ID элемента
 		if($(".main-header__nav-list-wrap").css('left') == '0px'){
@@ -75,15 +77,38 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 
-var headerSwiper = new Swiper('.main-header__slider', {
-	spaceBetween: 40,
-	slidesPerView: 2
-});
+
 
 var newsSwiper = new Swiper('.news-slider', {
 	spaceBetween: 40,
 	slidesPerView: 2,
-	slidePrevClass: "news-slider-nav__prev",
-	slideNextClass: "news-slider-nav__next"
+	navigation: {
+	    nextEl: '.news-slider-nav__next',
+	    prevEl: '.news-slider-nav__prev'
+  	}
 })
+
+
+var headerSwiper = new Swiper('.main-header__slider', {
+	slidesPerView: 1,
+	loop: true,
+	pagination: {
+		el: '.main-header__swiper-pagination',
+		type: 'fraction',
+	},
+	navigation: {
+	    nextEl: '.main-header-nav__next',
+	    prevEl: '.main-header-nav__prev'
+  	}
+})
+
+document.querySelector('.main-header-nav__next-arrow').addEventListener('click', function(){
+	headerSwiper.slideNext();
+})
+
+document.querySelector('.main-header-nav__prev-arrow').addEventListener('click', function(){
+	headerSwiper.slidePrev();
+})
+
+
 });
