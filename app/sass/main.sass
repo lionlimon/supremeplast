@@ -36,8 +36,7 @@ img
 
 body 
 	font-family: $default-font
-
-	
+	min-width: 320px
 
 .block
 	padding: 140px 102px 0 102px
@@ -56,6 +55,8 @@ body
 		margin-bottom: 18px
 
 
-	
+@media screen and (max-width: 767px)
+	.block
+		padding: 140px 0px 0 0px
 	
 @import "media" // Always at the end

@@ -2,13 +2,18 @@
 	padding-left: 100px
 	padding-right: 100px
 	padding-top: 0
-	padding-bottom: 143px
+	padding-bottom: 145px
+	&-slide
+		&-prev
+			overflow: hidden
+	&_popular
+		padding-bottom: 0
 	&-title
 		&__text
 			display: inline-block
 			font-size: 48px
 			line-height: 46px
-			margin-left: -4px
+			margin-left: 0px
 		&__img
 			display: inline-block
 			margin-top: -25px
@@ -24,7 +29,10 @@
 		&-nav
 			position: absolute
 			top: 7px
-			right: 5px
+			right: 25px
+			&__icon
+				path
+					fill: black
 			&__prev, &__next
 				border: none
 				background: none
@@ -35,7 +43,8 @@
 				cursor: pointer
 				transition-duration: .3s
 				&:hover
-					fill: #1a8ea5
+					path
+						fill: #1a8ea5
 				&:focus
 					outline: none
 			&__prev
@@ -82,22 +91,19 @@
 			background-repeat: no-repeat
 	&-all-items
 		display: block
-		margin: 0 auto
-		max-width: 200px
+		text-align: center
 		padding-left: 15px
 		padding-right: 15px
 		margin-top: 57px
 		padding-top: 2px
-		border: 1px solid white
-		border-radius: 30px
 		transition-duration: .3s
 		&:hover
 			text-decoration: none
-			border-color: rgba(0, 0, 0, .2)
 			.news-all-items__icon-block
 				border-color: transparent
 			.news-all-items__text
 				border-color: transparent
+				color: #1a8ea5
 		&__text
 			display: inline-block
 			vertical-align: middle
@@ -110,6 +116,7 @@
 			font-family: Formular
 			margin-top: -4px
 			transition-duration: .3s
+			margin-left: -1px
 		&__icon-block
 			width: 41px
 			height: 41px
@@ -124,6 +131,8 @@
 			width: 15px
 			margin: 0 auto
 			display: block
+			path
+				fill: black
 
 @media (max-width: 1600px)
 	.news
@@ -137,9 +146,11 @@
 @media (max-width: 1366px)
 	.news
 		padding-top: 0
-		padding-bottom: 108px
-		padding-left: 42px
-		padding-right: 42px
+		padding-bottom: 110px
+		padding-left: 22px
+		padding-right: 22px
+		&_popular
+			padding-bottom: 0
 		&-title
 			&__text
 				font-size: 36px
@@ -149,13 +160,13 @@
 		&-slider
 			&-nav
 				position: absolute
-				top: -44px
-				right: 0px
+				top: 10px
+				right: 20px
 				&__icon
 					width: 31px
 					height: 24px
 				&__prev
-					margin-right: 27px
+					margin-right: 24px
 		&-item
 			&__bottom
 				margin-top: 116px
@@ -189,13 +200,7 @@
 				font-weight: 600
 				letter-spacing: 0px
 		&-all-items
-			margin-top: 15px
-			max-width: 180px
-			padding-left: 10px
-			padding-right: 10px
-			&_popular
-				max-width: 156px
-				margin-top: 12px
+			margin-top: 40px
 			&__text
 				font-size: 14px
 				margin-left: 5px
@@ -264,6 +269,8 @@
 				width: 210px
 				height: 130px
 		&-slider
+			padding-left: 0
+			padding-right: 0
 			&-nav
 				display: none
 		&-slider
