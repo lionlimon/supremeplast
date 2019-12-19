@@ -146,3 +146,92 @@ document.querySelector('.main-header-nav__prev-arrow').addEventListener('click',
 
 
 });
+
+
+
+// Validate 
+
+// Phone mask
+function setCursorPosition(pos, elem) {
+
+    elem.focus();
+
+    if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
+
+    else if (elem.createTextRange) {
+
+        var range = elem.createTextRange();
+
+        range.collapse(true);
+
+        range.moveEnd("character", pos);
+
+        range.moveStart("character", pos);
+
+        range.select()
+
+    }
+
+}
+
+
+// validate 
+
+
+function mask(event) {
+    var matrix = this.defaultValue,
+        i = 0,
+        def = matrix.replace(/\D/g, ""),
+        val = this.value.replace(/\D/g, "");
+        def.length >= val.length && (val = def);
+    matrix = matrix.replace(/[_\d]/g, function(a) {
+        return val.charAt(i++) || "_"
+    });
+    this.value = matrix;
+    i = matrix.lastIndexOf(val.substr(-1));
+    i < matrix.length && matrix != this.defaultValue ? i++ : i = matrix.indexOf("_");
+    setCursorPosition(i, this)
+}
+
+
+
+
+if (document.querySelectorAll('input[name="phone"]').length) {
+	document.querySelectorAll('input[name="phone"]').forEach(function(e) {
+		e.addEventListener("input", mask, false);
+	});
+}
+
+
+// Popup 
+if (document.querySelectorAll('[data-popup]').length) {
+	
+	document.querySelectorAll('.popup').forEach(function(e) {
+		var popup = e;
+		var closeButton = popup.querySelector('.popup__close');
+
+
+		closeButton.addEventListener('click', function(e) {
+			popup.style.opacity = 0;
+			popup.style.visibility = 'hidden';
+			document.body.classList.remove('no-scroll');
+		});
+	});
+
+	document.querySelectorAll('[data-popup]').forEach(function(e) {
+		var elem = e;
+
+		elem.addEventListener('click', function(e) {
+			e.preventDefault();
+
+			var href = elem.dataset.popup;
+			var popup = document.getElementById(href);
+
+			popup.style.opacity = 1;
+			popup.style.visibility = 'visible';
+			document.body.classList.add('no-scroll');
+			
+		});
+	});
+
+}
