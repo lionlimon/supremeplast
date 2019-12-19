@@ -3,21 +3,28 @@
 	color: white
 	padding-top: 27px
 	position: relative
+	min-width: 320px
 	&__overlay-for-menu
 	    width: 100%
 	    height: 100%
-	    background-color: rgba(0,0,0,0.8)
+	    background-color: rgba(0,0,0,0.7)
 	    position: fixed
 	    top: 0
 	    left: 0
 	    display: none
-	&__nav-wrap
+	    cursor: pointer
+	&__menu-burger
+		cursor: pointer
 	&__nav-list
 		margin: 0
 		margin-top: 10px
 		padding: 0
 		display: flex
 		flex-direction: row
+		&-wrap
+			overflow-y: visible
+			&::-webkit-scrollbar 
+				width: 0
 	&__frst-sub-menu
 		display: block
 		visibility: hidden	
@@ -51,6 +58,8 @@
 					background-color: #d53722
 					color: white
 					text-decoration: none
+				&.active
+					background-color: #d53722
 	&__sec-sub-menu
 		display: block	
 		visibility: hidden	
@@ -92,11 +101,15 @@
 			&:not(.main-header__frst-sub-menu-item-link):not(.main-header__sec-sub-menu-item-link):hover
 				color: #80999f
 				text-decoration: none
+			&.active:not(.main-header__frst-sub-menu-item-link)
+				color: #80999f
 		&-arrow
 			position: absolute
 			right: -15px
 			top: 4px
 			cursor: pointer
+			&.active
+				filter: invert(0.37)
 	&__con
 		max-width: 1400px
 		padding: 0
@@ -117,12 +130,10 @@
 		letter-spacing: .3px
 		&:hover
 			color: white
-			text-decoration: none
 	&__email
 		letter-spacing: -.3px
 		&:hover
 			color: white
-			text-decoration: none
 	&__order-call-wrap
 		z-index: 2
 	&__order-call
@@ -146,6 +157,11 @@
 			text-decoration: none
 			color: black
 			background-color: white
+		&-icon-link
+			color: white
+			&:hover
+				color: white
+				text-decoration: none
 	&__slider
 		position: absolute
 		top: 0
@@ -185,20 +201,24 @@
 		    position: absolute
 		    top: 326px
 		    z-index: 2
+		    cursor: pointer
 		&-arrow
 			position: absolute
 			top: 113px
-			left: 13px		    
+			left: 13px		
+			cursor: pointer    
 	&-nav__next    
 		&-wrap
 		    position: absolute
 		    top: 326px
 		    right: 0
 		    z-index: 2
+		    cursor: pointer
 		&-arrow
 			position: absolute
 			top: 113px
 			left: 19px
+			cursor: pointer
 	&__swiper-pagination
 		bottom: 33px
 		font-family: "Formular"
@@ -219,7 +239,8 @@
 	.main-header
 		&__slider-con
 			margin-left: 40px
-
+		&__order-call
+			font-size: 15px
 
 @media screen and (max-width: 1500px)
 	.main-header
@@ -239,10 +260,15 @@
 
 @media screen and (max-width: 1199px)
 	.main-header
+		&__sidebar-menu
+			width: 70%
+			margin: auto
+			&-list
+				padding-right: 0
 		&__con
 			padding: 0 15px
 		&__slider-con
-			max-width: 960px
+			max-width: 665px
 			margin-left: auto
 			margin-right: auto
 		&__order-call
@@ -264,6 +290,7 @@
 			flex-direction: column
 			width: 70%
 			margin: auto
+			margin-bottom: 35px
 			&-wrap
 				position: fixed
 				top: 0
@@ -273,21 +300,34 @@
 				height: 100%
 				margin-top: 0
 				z-index: 99999
+				overflow-y: scroll
+				&::-webkit-scrollbar 
+					width: 0
 		&__nav-item:not(:last-child):not(.main-header__frst-sub-menu-item):not(.main-header__sec-sub-menu-item)
 			margin-right: 0px 
 		&__nav-item
 			position: relative
 			margin-right: 0px 
 			margin-bottom: 15px
+			&-arrow
+					&.active
+						filter: invert(0)
+						&:before
+							color: #fb8677
 			&-link
 				&:after
 					right: 0
 					position: absolute
+				&.active:not(.main-header__frst-sub-menu-item-link)
+					color: #fb8677
+				&:not(.main-header__frst-sub-menu-item-link):not(.main-header__sec-sub-menu-item-link):hover
+					color: #fb8677
 		&__frst-sub-menu
 			display: none
 			width: 100%
 			padding: 0
 			position: initial
+			visibility: visible
 			&-wrap
 				padding: 0
 				background-color: transparent
@@ -302,17 +342,24 @@
 					transform: rotate(0deg)
 					top: 0
 					right: -15px
+					&.active
+						filter: invert(0)
+						&:before
+							color: #fb8677
 				&-link
 					padding: 2px 0px
 					display: inline
 					&:hover
-						color: #809aa1
+						color: #fb8677
 						background-color: transparent
 					&:after
 						position: absolute
 						top: 37%
 						right: 0
 						transform: rotate(0deg)
+					&.active
+						background-color: transparent
+						color: #fb8677
 		&__sec-sub-menu
 			display: none	
 			position: initial
@@ -321,6 +368,8 @@
 			width: 100%
 			padding-left: 33px
 			padding-bottom: 3px
+			right: -261px
+			visibility: visible
 			&-wrap
 			&-item
 				margin-right: 0
@@ -337,9 +386,11 @@
 						margin-left: 27px
 						transform: rotate(-90deg)
 					&:hover
-						color: #809aa1
+						color: #fb8677
 						text-decoration: none
 						background-color: transparent
+					&.active
+						color: #ff9385
 
 		&__logo
 			margin-bottom: 50px
@@ -349,13 +400,7 @@
 				max-width: 100%
 				margin: auto
 			&-link
-				margin: auto
-				
-
-@media screen and (max-width: 1199px)
-	.main-header
-		&__slider-con
-			max-width: 720px
+				margin: auto		
 
 @media screen and (max-width: 767px)
 	.main-header

@@ -35,8 +35,21 @@
 				color: #9ca1a4
 				text-decoration: none
 
+@media (max-width: 1366px)
+	.footer
+		&-menu
+			padding-left: 42px
+			padding-right: 42px
+			&__title
+				font-size: 14px
+				line-height: 24px
+			&__link
+				font-size: 14px
+				line-height: 20px
+
 @media (max-width: 991px)
 	.footer
+		padding-top: 0
 		&-menu
 			&__list
 				margin-bottom: 45px
@@ -46,7 +59,22 @@
 @media (max-width: 767px)
 	.footer
 		&-menu
-			&__title
+			&__block
 				text-align: center
+			&__title
+				position: relative
+				display: inline-block
+				&_angle
+					&::after
+						content: ""
+						display: inline-block
+						position: absolute
+						border: 5px solid transparent
+						border-top: 5px solid #000
+						right: -20px
+						top: 12px
 			&__list
 				text-align: center
+				display: none
+				&_sub
+					display: block
