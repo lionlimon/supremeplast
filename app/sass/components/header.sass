@@ -57,6 +57,7 @@
 				letter-spacing: 0px
 				color: white
 				position: relative
+				transition: .2s
 				&:hover
 					background-color: #d53722
 					color: white
@@ -79,6 +80,7 @@
 				padding: 3.9px 29px
 				display: block
 				letter-spacing: -.2px
+				transition: .2s
 				&:after
 					margin-left: 27px
 					transform: rotate(-90deg)
@@ -91,7 +93,7 @@
 				right: -15px
 				top: 4px
 	&__nav-item
-		font-family: 'Formular'
+		
 		list-style: none
 		font-size: 16px
 		letter-spacing: .4px
@@ -100,10 +102,11 @@
 		&:not(:last-child):not(.main-header__frst-sub-menu-item):not(.main-header__sec-sub-menu-item)
 			margin-right: 33px
 		&-link
-			color: white			
+			color: white
 			&:not(.main-header__frst-sub-menu-item-link):not(.main-header__sec-sub-menu-item-link):hover
 				color: #80999f
 				text-decoration: none
+				transition: .1s		
 			&.active:not(.main-header__frst-sub-menu-item-link)
 				color: #80999f
 		&-arrow
@@ -128,7 +131,7 @@
 		align-items: flex-end
 		padding-right: 10px
 	&__phone, &__email
-		font-family: 'Formular'
+		
 		font-size: 16px
 		z-index: 2
 		color: white
@@ -155,12 +158,12 @@
 		display: flex
 		justify-content: center
 		align-items: center
-		font-family: 'Formular'
+		
 		font-size: 16px
 		z-index: 2
 		color: white
 		line-height: 40px
-		transition: .1s
+		transition: .2s
 		&:hover
 			text-decoration: none
 			color: black
@@ -180,7 +183,7 @@
 		height: 100%
 		&-title
 			max-width: 962px	
-			font-family: 'Formular'
+			
 			font-size: 60px
 			line-height: 66px
 			margin-top: -10px
@@ -197,9 +200,9 @@
 			display: flex
 			justify-content: center
 			align-items: center
-			font-family: 'Formular'
+			
 			font-size: 16px
-			transition: .1s
+			transition: .2s
 			&:hover
 				color: white
 				background-color: #1a8ea5
@@ -337,10 +340,10 @@
 					color: #fb8677
 
 		&__frst-sub-menu
-			display: none
+			display: block
 			width: 100%
 			padding: 0
-			position: initial
+			position: relative
 			visibility: visible
 			&-wrap
 				padding: 0
