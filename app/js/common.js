@@ -23,39 +23,46 @@ document.addEventListener('DOMContentLoaded', function(){
 	var oo = false;
 
 	function resetall(){
-		frstsublist.forEach(function(el, index) {
-			el.querySelector('.main-header__frst-sub-menu-item-link').classList.remove('active');
-			if(el.querySelector('.js-sec-sub-menu')){
-				el.querySelector('.js-sec-sub-menu').style.display = 'none';
-			}
-		})
-		navit.forEach(function(el, index) {
-			el.querySelector('.main-header__nav-item-link').classList.remove('active');
-			if(el.querySelector('.main-header__frst-sub-menu')){
-				el.querySelector('.main-header__frst-sub-menu').style.display = 'none';
-			}
-		})
-		arrows.forEach(function(el, index){
-			el.classList.remove('active');
-		})
-		arrowsfrstsub.forEach(function(el, index){
-			el.classList.remove('active');
-		})
+		if(frstsublist.length > 0)
+			frstsublist.forEach(function(el, index) {
+				el.querySelector('.main-header__frst-sub-menu-item-link').classList.remove('active');
+				if(el.querySelector('.js-sec-sub-menu')){
+					el.querySelector('.js-sec-sub-menu').style.display = 'none';
+				}
+			})
+		if(navit.length > 0)
+			navit.forEach(function(el, index) {
+				el.querySelector('.main-header__nav-item-link').classList.remove('active');
+				if(el.querySelector('.main-header__frst-sub-menu')){
+					el.querySelector('.main-header__frst-sub-menu').style.display = 'none';
+				}
+			})
+		if(arrows.length > 0)
+			arrows.forEach(function(el, index){
+				el.classList.remove('active');
+			})
+		if(arrowsfrstsub.length > 0)
+			arrowsfrstsub.forEach(function(el, index){
+				el.classList.remove('active');
+			})
 	}
 
 	function resetscndsublist(){
-		frstsublist.forEach(function(el, index) {
-			el.querySelector('.main-header__frst-sub-menu-item-link').classList.remove('active');
-			if(el.querySelector('.js-sec-sub-menu')){
-				el.querySelector('.js-sec-sub-menu').style.display = 'none';
-			}
-		})
-		arrowsfrstsub.forEach(function(el, index){
-			el.classList.remove('active');
-		})
+		if(frstsublist.length > 0)
+			frstsublist.forEach(function(el, index) {
+				el.querySelector('.main-header__frst-sub-menu-item-link').classList.remove('active');
+				if(el.querySelector('.js-sec-sub-menu')){
+					el.querySelector('.js-sec-sub-menu').style.display = 'none';
+				}
+			})
+		if(arrowsfrstsub.length > 0)
+			arrowsfrstsub.forEach(function(el, index){
+				el.classList.remove('active');
+			})
 	}
 
-	frstsublist.forEach(function(el, index) {
+	if(frstsublist.length > 0)
+		frstsublist.forEach(function(el, index) {
 		if(window.innerWidth > 1199){
 		setTimeout(function(){
 			if(el.querySelector('.js-sec-sub-menu')){
@@ -87,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			})
 				}
 			})
+	if(navit.length > 0)
 	navit.forEach(function(el, index) {
 		if(window.innerWidth > 1199){
 		setTimeout(function(){
@@ -120,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		})
 	});
 
+	if(secsublist.length > 0)
 	secsublist.forEach(function(el, index){
 		
 			el.addEventListener('mouseover', function(){
@@ -133,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function(){
 				}
 			})
 	})
+	if(arrows.length > 0)
 	arrows.forEach(function(el, index){
 		el.addEventListener('mouseup', function(){
 			var navit = this.closest('.js-nav-item');
@@ -152,6 +162,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			}
 		})
 	})
+	if(arrowsfrstsub.length > 0)
 	arrowsfrstsub.forEach(function(el, index){
 		el.addEventListener('mouseup', function(){
 			var navit = this.closest('.js-nav-item');
@@ -194,6 +205,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			menu.style.left = '-280px';
 			resetall();
 			if(oo != true){
+				if(frstsublist.length > 0)
 				frstsublist.forEach(function(el, index) {
 					if(el.querySelector('.js-sec-sub-menu')){
 						el.querySelector('.js-sec-sub-menu').style.visibility = 'hidden';
@@ -207,6 +219,7 @@ document.addEventListener('DOMContentLoaded', function(){
 						}, 300)
 					}
 				})
+			if(navit.length > 0)
 				navit.forEach(function(el, index) {
 					if(el.querySelector('.main-header__frst-sub-menu')){
 						el.querySelector('.main-header__frst-sub-menu').style.visibility = 'hidden';
@@ -299,7 +312,7 @@ document.querySelector('.main-header-nav__prev-arrow').addEventListener('click',
 })
 
 	var list = document.querySelectorAll('.js-footer-menu__title');
-	var link = document.querySelectorAll('.footer-menu__link');
+	if(list.length > 0)
 	list.forEach(function(el, index) {
 		var next = el.nextElementSibling;
 		if (next != null) {
