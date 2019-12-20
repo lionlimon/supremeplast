@@ -1,13 +1,8 @@
 .page
-	display: grid
-	display: -ms-grid
-	-ms-grid-columns: 280px auto
-	grid-template-columns: 280px 1fr
+	
 	
 .sidebar
-	-ms-grid-column: 1
-	-ms-grid-row: 1
-	padding-bottom: 60px
+	width: 280px	
 	background-color: #00617c
 	&-container
 		background-color: #00617c
@@ -116,9 +111,7 @@
 				opacity: .5
 .content
 	background-color: white
-	-ms-grid-column: 2
-	-ms-grid-row: 1
-	overflow: hidden
+	padding-left: 280px
 
 @media (min-width: 1200px) and (max-width: 1366px)
 	.page

@@ -65,15 +65,19 @@
 		color: #b1d5dd
 		border-bottom: 1px dashed #b1d5dd
 		position: relative
-		
+		cursor: pointer
+		line-height: 1
+		display: inline-block
 		&:hover
 			text-decoration: none
 			color: #b1d5dd
 		
-			.offers-slider__popup-mini
-				opacity: 1
-				visibility: visible
-				//transform: translateY(100%)
+		// 	.offers-slider__popup-mini
+		// 		opacity: 1
+		// 		visibility: visible
+		// 		//transform: translateY(100%)
+
+
 
 
 
@@ -144,6 +148,10 @@
 		transform: translateY(calc(-100% - 18px))
 		visibility: hidden
 		width: 300px
+
+		&.active
+			opacity: 1
+			visibility: visible
 	
 	.swiper-pagination
 		bottom: 0
@@ -171,12 +179,15 @@
 	background-color: #fff
 	max-width: 320px
 	color: #000
+	display: block
 	
 	&__title
 		font-size: 16px
 		font-weight: bold
 		margin-bottom: 10px
 
+	&__text
+		line-height: 1.5	
 @media screen and (max-width: 1366px)
 	.offers-slider
 		&__content
