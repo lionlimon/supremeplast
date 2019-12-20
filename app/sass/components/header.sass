@@ -43,7 +43,7 @@
 			&-arrow
 				position: absolute
 				right: 28px
-				top: 9px
+				top: 11px
 				cursor: pointer
 				transform: rotate(-90deg)
 			&-link
@@ -109,10 +109,13 @@
 		&-arrow
 			position: absolute
 			right: -15px
-			top: 4px
+			top: 8px
 			cursor: pointer
 			&.active
 				filter: invert(0.37)
+			&-svg
+				width: 10px
+				height: 10px
 	&__con
 		max-width: 1400px
 		padding: 0
@@ -167,6 +170,8 @@
 			&:hover
 				color: white
 				text-decoration: none
+		&-icon-svg
+			height: 30px	
 	&__slider
 		position: absolute
 		top: 0
@@ -319,6 +324,8 @@
 						filter: invert(0)
 						&:before
 							color: #fb8677
+						path
+							fill: #fb8677
 			&-link
 				&:after
 					right: 0
@@ -327,6 +334,7 @@
 					color: #fb8677
 				&:not(.main-header__frst-sub-menu-item-link):not(.main-header__sec-sub-menu-item-link):hover
 					color: #fb8677
+
 		&__frst-sub-menu
 			display: none
 			width: 100%
@@ -351,6 +359,8 @@
 						filter: invert(0)
 						&:before
 							color: #fb8677
+						path
+							fill: #fb8677
 				&-link
 					padding: 2px 0px
 					display: inline
