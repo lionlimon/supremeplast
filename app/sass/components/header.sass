@@ -43,7 +43,7 @@
 			&-arrow
 				position: absolute
 				right: 28px
-				top: 9px
+				top: 11px
 				cursor: pointer
 				transform: rotate(-90deg)
 			&-link
@@ -109,10 +109,13 @@
 		&-arrow
 			position: absolute
 			right: -15px
-			top: 4px
+			top: 8px
 			cursor: pointer
 			&.active
 				filter: invert(0.37)
+			&-svg
+				width: 10px
+				height: 10px
 	&__con
 		max-width: 1400px
 		padding: 0
@@ -138,11 +141,12 @@
 		&:hover
 			color: white
 	&__order-call-wrap
+		cursor: pointer
 		z-index: 2
 	&__order-call
 		border: 1px solid white
 		white-space: nowrap
-		height: 84%
+		height: 40px
 		width: 106%
 		margin-left: -10px
 		margin-top: 3px
@@ -155,6 +159,7 @@
 		font-size: 16px
 		z-index: 2
 		color: white
+		line-height: 40px
 		transition: .1s
 		&:hover
 			text-decoration: none
@@ -162,9 +167,12 @@
 			background-color: white
 		&-icon-link
 			color: white
+			cursor: pointer
 			&:hover
 				color: white
 				text-decoration: none
+		&-icon-svg
+			height: 30px	
 	&__slider
 		position: absolute
 		top: 0
@@ -317,6 +325,8 @@
 						filter: invert(0)
 						&:before
 							color: #fb8677
+						path
+							fill: #fb8677
 			&-link
 				&:after
 					right: 0
@@ -325,6 +335,7 @@
 					color: #fb8677
 				&:not(.main-header__frst-sub-menu-item-link):not(.main-header__sec-sub-menu-item-link):hover
 					color: #fb8677
+
 		&__frst-sub-menu
 			display: none
 			width: 100%
@@ -349,6 +360,8 @@
 						filter: invert(0)
 						&:before
 							color: #fb8677
+						path
+							fill: #fb8677
 				&-link
 					padding: 2px 0px
 					display: inline
@@ -428,5 +441,14 @@
 
 @media screen and (max-width: 420px)
 	.main-header
+		height: 700px
 		&__slider-con
-			max-width: 270px
+			max-width: 100%
+
+
+		&__slider-title
+			line-height: 1.32
+			padding-right: 30px	
+			font-size: 24px
+			margin-top: 180px		
+			max-width: 100%	

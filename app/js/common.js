@@ -464,6 +464,8 @@ function setCursorPosition(pos, elem) {
 
 }
 
+// Validate
+
 function validate() {
 	var form = document.querySelector('.call-form');
 	var name_value = form.querySelector('[name="name"]').value;
