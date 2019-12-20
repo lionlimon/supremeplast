@@ -9,10 +9,14 @@
 	"author": "WebDesign Master",
 	"license": "ISC",
 	"devDependencies": {
+		"@babel/core": "^7.7.7",
+		"@babel/preset-env": "^7.7.7",
+		"babel": "^6.23.0",
 		"browser-sync": "^2.26.7",
 		"del": "^5.1.0",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^7.0.0",
+		"gulp-babel": "^8.0.0",
 		"gulp-clean-css": "^4.2.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-image-resize": "^0.13.1",
@@ -23,5 +27,8 @@
 		"gulp-sass": "^4.0.2",
 		"gulp-uglify": "^3.0.2",
 		"gulp-util": "^3.0.8"
+	},
+	"dependencies": {
+		"@babel/polyfill": "^7.7.0"
 	}
 }
