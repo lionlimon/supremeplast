@@ -1,14 +1,15 @@
 .footer
-	padding-bottom: 120px
 	padding-top: 25px
 	&-menu
 		background-color: #f0f8fd
 		padding-top: 72px
 		padding-left: 120px
 		padding-right: 112px
+		padding-bottom: 55px
 		&__block
 			&_right
 				margin-left: auto
+				margin-top: -21px
 		&__title
 			font-weight: 600
 			font-size: 16px
@@ -34,18 +35,83 @@
 			&:hover
 				color: #9ca1a4
 				text-decoration: none
-
+	&-info
+		padding-top: 44px
+		padding-bottom: 50px
+		background-color: #00667d
+		background-image: url(../img/footer_decor.png)
+		background-repeat: no-repeat
+		background-position: right 15px top
+		padding-left: 120px
+		padding-right: 113px
+		&__name
+			font-weight: 300
+			font-size: 16px
+			line-height: 22px
+			color: white
+			margin-bottom: 16px
+		&__address
+			font-weight: 300
+			font-size: 16px
+			line-height: 22px
+			color: white
+		&__phone
+			font-weight: 600
+			font-size: 16px
+			line-height: 24px
+			color: white
+			display: block
+			margin-top: -1px
+			&:hover
+				color: white
+		&__mail
+			display: inline-block
+			font-weight: 300
+			font-size: 16px
+			line-height: 24px
+			color: white
+			border-bottom: 1px solid rgba(256, 256, 256, .2)
+			margin-top: 11px
+			&:hover
+				color: white
+				border-color: white
+				text-decoration: none
+		&__logo
+			transition-duration: .3s
+			margin-top: 7px
+			margin-left: 2px
+			&:hover
+				opacity: .8
+		&__icon
+			&-link
+				margin-right: 20.2px
+				display: inline-block
+				vertical-align: middle
+				transition-duration: .3s
+				&:last-child
+					margin-right: 0
+				&:hover
+					opacity: .5
 @media (max-width: 1366px)
 	.footer
 		&-menu
 			padding-left: 42px
 			padding-right: 42px
+			padding-top: 71px
+			&__list
+				&_sub
+					padding-top: 17px
 			&__title
 				font-size: 14px
 				line-height: 24px
+			&__item
+				margin-bottom: 17px
 			&__link
 				font-size: 14px
 				line-height: 20px
+		&-info
+			padding-left: 42px
+			padding-right: 42px
 
 @media (max-width: 991px)
 	.footer
@@ -55,12 +121,17 @@
 				margin-bottom: 45px
 				&_sub
 					margin-bottom: 20px
+		&-info
+			&__icons
+				margin-bottom: 20px
 
 @media (max-width: 767px)
 	.footer
 		&-menu
 			&__block
 				text-align: center
+				&_right
+					margin-top: 0
 			&__title
 				position: relative
 				display: inline-block
@@ -78,3 +149,15 @@
 				display: none
 				&_sub
 					display: block
+					padding-top: 5px
+					padding-left: 0
+		&-info
+			text-align: center
+			&__icons
+				display: flex
+				justify-content: center
+				margin-bottom: 25px
+			&__logo
+				margin-top: 35px
+			&__phone
+				margin-top: 5px

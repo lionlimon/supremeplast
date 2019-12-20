@@ -290,6 +290,7 @@ document.querySelector('.main-header-nav__prev-arrow').addEventListener('click',
 })
 
 	var list = document.querySelectorAll('.js-footer-menu__title');
+	var link = document.querySelectorAll('.footer-menu__link');
 	list.forEach(function(el, index) {
 		var next = el.nextElementSibling;
 		if (next != null) {
@@ -301,6 +302,12 @@ document.querySelector('.main-header-nav__prev-arrow').addEventListener('click',
 					this.nextElementSibling.style.display = "block";
 				}
 			})
+		}
+	})
+	link.forEach(function(el, index) {
+		var next = el.nextElementSibling;
+		if (next != null && window.innerWidth < 768) {
+			el.style = ("font-weight: 500;");
 		}
 	})
 });
