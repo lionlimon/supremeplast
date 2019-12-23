@@ -268,7 +268,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	var list = document.querySelectorAll('.js-footer-menu__title');
 	var link = document.querySelectorAll('.footer-menu__link');
-	if (list.length > 0)
+
+	function footerLinkCheck() {
+		if (link.length > 0) {
+			link.forEach(function (el, index) {
+				var next = el.nextElementSibling;
+				if (next != null && window.innerWidth < 768) {
+					el.style = ("font-weight: 500;");
+				} else if (next != null && window.innerWidth >= 768) {
+					el.style = ("font-weight: 300;");
+				}
+			})
+		}
+	};
+
+	function sidebarScrollCheck() {
+		var sidebar = document.querySelector('.sidebar-container');
+		var sidebarLogo = document.querySelector('.sidebar-logo');
+		var sidebarMenu = document.querySelector('.sidebar-menu');
+		var sidebarHeight = sidebarLogo.offsetHeight + sidebarMenu.offsetHeight;
+	
+		if (window.innerHeight < sidebarHeight) {
+			sidebar.style = "overflow-y: scroll";
+		} else {
+			sidebar.style = "overflow-y: hidden";
+		}
+	}
+
+	if (list.length > 0) {
 		list.forEach(function (el, index) {
 			var next = el.nextElementSibling;
 			if (next != null) {
@@ -282,6 +309,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				})
 			}
 		})
+	}
+
+	footerLinkCheck();
+	sidebarScrollCheck();
 
 	var resizeWindow;
 
@@ -293,6 +324,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				list.forEach(function (el, index) {
 					var next = el.nextElementSibling;
 					if (next != null) {
+						el.classList.add('footer-menu__title_angle');
 						if (next.style.display != "block" && window.innerWidth >= 768) {
 							next.style.display = "block";
 						} else if (next.style.display == "block" && window.innerWidth < 768) {
@@ -302,17 +334,9 @@ document.addEventListener('DOMContentLoaded', function () {
 					}
 				})
 			}
-	
-			if (link.length > 0) {
-				link.forEach(function (el, index) {
-					var next = el.nextElementSibling;
-					if (next != null && window.innerWidth < 768) {
-						el.style = ("font-weight: 500;");
-					} else if (next != null && window.innerWidth >= 768) {
-						el.style = ("font-weight: 300;");
-					}
-				})
-			}
+
+			footerLinkCheck();
+			sidebarScrollCheck();
 		}, 100);
 		if (window.innerWidth > 1199) {
 			document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
@@ -544,13 +568,13 @@ function validate() {
 	}
 }
 
-	// document.querySelector('.call-form__button').addEventListener('mouseup', function(e){
+// document.querySelector('.call-form__button').addEventListener('mouseup', function(e){
 
-	// 	var form = document.querySelector('.call-form');
-	// 	var name = form.querySelector('[name="name"]').value;
-	// 	var phone = form.querySelector('[name="phone"]').value;
-	// 	console.log(name);
-	// 	this.disabled = false;
-	// 		// return false;
+// 	var form = document.querySelector('.call-form');
+// 	var name = form.querySelector('[name="name"]').value;
+// 	var phone = form.querySelector('[name="phone"]').value;
+// 	console.log(name);
+// 	this.disabled = false;
+// 		// return false;
 
-	// })
+// })
