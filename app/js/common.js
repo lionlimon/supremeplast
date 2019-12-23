@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	if (frstsublist.length > 0)
 		frstsublist.forEach(function (el, index) {
-			if (window.innerWidth > 1199) {
+			if (window.innerWidth > 991) {
 				setTimeout(function () {
 					if (el.querySelector('.js-sec-sub-menu')) {
 						var wdth = el.querySelector('.js-sec-sub-menu').offsetWidth;
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 					if (this.querySelector('.js-sec-sub-menu')) {
 
-						if (window.innerWidth > 1199) {
+						if (window.innerWidth > 991) {
 							this.querySelector('.js-sec-sub-menu').style.display = 'block';
 						}
 					}
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				el.addEventListener('mouseout', function () {
 
 					if (this.querySelector('.js-sec-sub-menu')) {
-						if (window.innerWidth > 1199) {
+						if (window.innerWidth > 991) {
 							this.querySelector('.js-sec-sub-menu').style.display = 'none';
 						}
 					}
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	if (navit.length > 0)
 		navit.forEach(function (el, index) {
-			if (window.innerWidth > 1199) {
+			if (window.innerWidth > 991) {
 				setTimeout(function () {
 					if (el.querySelector('.main-header__frst-sub-menu')) {
 						el.querySelector('.main-header__frst-sub-menu').style.display = 'none';
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			el.addEventListener('mouseover', function () {
 
 				if (this.querySelector('.main-header__frst-sub-menu')) {
-					if (window.innerWidth > 1199) {
+					if (window.innerWidth > 991) {
 						this.querySelector('.main-header__frst-sub-menu').style.display = 'block';
 						if (!this.querySelector('.main-header__nav-item-link').classList.contains('main-header__frst-sub-menu-item-link')) {
 							this.querySelector('.main-header__nav-item-link').classList.add('active');
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			})
 			el.addEventListener('mouseout', function () {
 				if (this.querySelector('.main-header__frst-sub-menu')) {
-					if (window.innerWidth > 1199) {
+					if (window.innerWidth > 991) {
 						this.querySelector('.main-header__frst-sub-menu').style.display = 'none';
 						this.querySelector('.main-header__nav-item-link').classList.remove('active');
 						this.querySelector('.main-header__nav-item-arrow').classList.remove('active');
@@ -132,12 +132,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		secsublist.forEach(function (el, index) {
 
 			el.addEventListener('mouseover', function () {
-				if (window.innerWidth > 1199) {
+				if (window.innerWidth > 991) {
 					el.closest('.js-nav-item').querySelector('.main-header__frst-sub-menu-item-link').classList.add('active');
 				}
 			})
 			el.addEventListener('mouseout', function () {
-				if (window.innerWidth > 1199) {
+				if (window.innerWidth > 991) {
 					el.closest('.js-nav-item').querySelector('.main-header__frst-sub-menu-item-link').classList.remove('active');
 				}
 			})
@@ -198,43 +198,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
 		}
 	})
-	window.onresize = function () {
-		if (window.innerWidth > 1199) {
-			document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
-			overlay.style.display = 'none';
-			menu.style.left = '-280px';
-			resetAll();
-			if (oo != true) {
-				if (frstsublist.length > 0)
-					frstsublist.forEach(function (el, index) {
-						if (el.querySelector('.js-sec-sub-menu')) {
-							el.querySelector('.js-sec-sub-menu').style.visibility = 'hidden';
-							el.querySelector('.js-sec-sub-menu').style.display = 'block';
-							setTimeout(function () {
-								var wdth = el.querySelector('.js-sec-sub-menu').offsetWidth;
-								el.querySelector('.js-sec-sub-menu').style.display = 'none';
-								el.querySelector('.js-sec-sub-menu').style.right = '-' + wdth + 'px';
-								el.querySelector('.js-sec-sub-menu').style.visibility = 'visible';
 
-							}, 300)
-						}
-					})
-				if (navit.length > 0)
-					navit.forEach(function (el, index) {
-						if (el.querySelector('.main-header__frst-sub-menu')) {
-							el.querySelector('.main-header__frst-sub-menu').style.visibility = 'hidden';
-							el.querySelector('.main-header__frst-sub-menu').style.display = 'block';
-							setTimeout(function () {
-								el.querySelector('.main-header__frst-sub-menu').style.display = 'none';
-								el.querySelector('.main-header__frst-sub-menu').style.visibility = 'visible';
+		
 
-							}, 300)
-						}
-					})
-				oo = true;
-			}
-		}
-	}
 
 	if (document.querySelectorAll('.news-slider')) {
 		var newsSwiper = new Swiper('.news-slider', {
@@ -318,7 +284,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 
 	var resizeWindow;
+
 	window.onresize = function () {
+
 		clearTimeout(resizeWindow);
 		resizeWindow = setTimeout(function () {
 			if (list.length > 0) {
@@ -346,6 +314,41 @@ document.addEventListener('DOMContentLoaded', function () {
 				})
 			}
 		}, 100);
+		if (window.innerWidth > 1199) {
+			document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
+			overlay.style.display = 'none';
+			menu.style.left = '-280px';
+			resetAll();
+			if (oo != true) {
+				if (frstsublist.length > 0)
+					frstsublist.forEach(function (el, index) {
+						if (el.querySelector('.js-sec-sub-menu')) {
+							el.querySelector('.js-sec-sub-menu').style.visibility = 'hidden';
+							el.querySelector('.js-sec-sub-menu').style.display = 'block';
+							setTimeout(function () {
+								var wdth = el.querySelector('.js-sec-sub-menu').offsetWidth;
+								el.querySelector('.js-sec-sub-menu').style.display = 'none';
+								el.querySelector('.js-sec-sub-menu').style.right = '-' + wdth + 'px';
+								el.querySelector('.js-sec-sub-menu').style.visibility = 'visible';
+
+							}, 300)
+						}
+					})
+				if (navit.length > 0)
+					navit.forEach(function (el, index) {
+						if (el.querySelector('.main-header__frst-sub-menu')) {
+							el.querySelector('.main-header__frst-sub-menu').style.visibility = 'hidden';
+							el.querySelector('.main-header__frst-sub-menu').style.display = 'block';
+							setTimeout(function () {
+								el.querySelector('.main-header__frst-sub-menu').style.display = 'none';
+								el.querySelector('.main-header__frst-sub-menu').style.visibility = 'visible';
+
+							}, 300)
+						}
+					})
+				oo = true;
+			}
+		}
 	};
 });
 
@@ -454,6 +457,17 @@ function setCursorPosition(pos, elem) {
 
 // Validate
 
+function checkboxSetValue() {
+	if(document.querySelector('.js-call-order-checkbox').checked == true){
+		document.querySelector('.js-call-order-checkbox').checked = false;
+		document.querySelector('.js-call-order-checkbox-apply').style.opacity = '0';
+	}else{
+		document.querySelector('.js-call-order-checkbox').checked = true;
+		document.querySelector('.js-call-order-checkbox-apply').style.opacity = '1';
+	}
+}
+
+
 function validate() {
 	var form = document.querySelector('.call-form');
 	var name_value = form.querySelector('[name="name"]').value;
@@ -462,24 +476,65 @@ function validate() {
 	var phone_value = form.querySelector('[name="phone"]').value;
 	var phone_tag = form.querySelector('.js-inp-phone');
 	var phone_error = form.querySelector('.js-error-phone');
+	var checkbox_value = document.querySelector('.js-call-order-checkbox').checked;
+	var checkbox = document.querySelector('.js-call-order-imit-checkbox');
+	var checkbox_error = document.querySelector('.js-error-checkbox');
 	var regname = /^[a-zа-яё]+$/i;
-	if ((name_value == "" || regname.exec(name_value) == null) && phone_value == "+7(___)___-____") {
+	if ((name_value == "" || regname.exec(name_value) == null) && phone_value == "+7(___)___-____" && !checkbox_value) {
 		name_tag.classList.add('error');
 		name_error.style.display = "block";
 		phone_tag.classList.add('error');
 		phone_error.style.display = "block";
+		checkbox.classList.add('error');
+		checkbox_error.style.display = "block";
 		return false;
-	} else if ((name_value == "" || regname.exec(name_value) == null) && phone_value != "+7(___)___-____") {
+	} else if ((name_value == "" || regname.exec(name_value) == null) && phone_value != "+7(___)___-____" && !checkbox_value) {
 		name_tag.classList.add('error');
 		name_error.style.display = "block";
+		checkbox.classList.add('error');
+		checkbox_error.style.display = "block";
 		phone_tag.classList.remove('error');
 		phone_error.style.display = "none";
 		return false;
-	} else if (phone_value == "+7(___)___-____" && (name_value != "" && regname.exec(name_value) != null)) {
+	} else if (phone_value == "+7(___)___-____" && (name_value != "" && regname.exec(name_value) != null) && !checkbox_value) {
+		phone_tag.classList.add('error');
+		phone_error.style.display = "block";
+		checkbox.classList.add('error');
+		checkbox_error.style.display = "block";
+		name_tag.classList.remove('error');
+		name_error.style.display = "none";
+		return false;
+	} else if ((name_value == "" || regname.exec(name_value) == null) && phone_value == "+7(___)___-____" && checkbox_value) {
+		phone_tag.classList.add('error');
+		phone_error.style.display = "block";
+		name_tag.classList.add('error');
+		name_error.style.display = "block";
+		checkbox.classList.remove('error');
+		checkbox_error.style.display = "none";
+		return false;
+	}else if ((name_value == "" || regname.exec(name_value) == null) && phone_value != "+7(___)___-____" && checkbox_value) {
+		phone_tag.classList.remove('error');
+		phone_error.style.display = "none";
+		name_tag.classList.add('error');
+		name_error.style.display = "block";
+		checkbox.classList.remove('error');
+		checkbox_error.style.display = "none";
+		return false;
+	}else if ((name_value != "" && regname.exec(name_value) != null) && phone_value == "+7(___)___-____" && checkbox_value) {
 		phone_tag.classList.add('error');
 		phone_error.style.display = "block";
 		name_tag.classList.remove('error');
 		name_error.style.display = "none";
+		checkbox.classList.remove('error');
+		checkbox_error.style.display = "none";
+		return false;
+	}else if ((name_value != "" && regname.exec(name_value) != null) && phone_value != "+7(___)___-____" && !checkbox_value) {
+		phone_tag.classList.remove('error');
+		phone_error.style.display = "none";
+		name_tag.classList.remove('error');
+		name_error.style.display = "none";
+		checkbox.classList.add('error');
+		checkbox_error.style.display = "block";
 		return false;
 	} else {
 		name_tag.classList.remove('error');

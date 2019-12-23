@@ -89,14 +89,14 @@
 					<div class="main-header__nav-wrap">
 						<div class="row">
 							<div class="col-2 col-sm-5 col-md-5 col-lg-7 col-xl-8" style="z-index: 3">
-								<?xml version="1.0" ?><svg class="d-flex d-xl-none main-header__menu-burger js-menu-burger" height="50"
+								<?xml version="1.0" ?><svg class="d-flex d-lg-none main-header__menu-burger js-menu-burger" height="50"
 									viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg">
 									<path fill="white" class="heroicon-ui main-header__menu-burger-path js-menu-burger-path"
 										d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
 								</svg>
 								<div class="main-header__overlay-for-menu js-overlay-for-menu"></div>
 								<nav class="main-header__nav-list-wrap js-nav-list-wrap">
-									<div class="main-header__logo d-flex d-xl-none">
+									<div class="main-header__logo d-flex d-lg-none">
 										<a href="/" class="main-header__logo-link">
 											<img src="./img/Logotype.png" alt="" class="main-header__logo-img">
 										</a>
@@ -257,7 +257,7 @@
 										<li class="main-header__nav-item js-nav-item"><a href="#"
 												class="main-header__nav-item-link">Контакты</a></li>
 									</ul>
-									<div class="main-header__sidebar-menu sidebar-menu d-block d-xl-none">
+									<div class="main-header__sidebar-menu sidebar-menu d-block d-lg-none">
 										<ul class="main-header__sidebar-menu-list sidebar-menu__list">
 											<li class="sidebar-menu__item">
 												<a href="#" class="sidebar-menu__link">Аксессуары для ванных комнат, туалета и кухни</a>
@@ -1177,18 +1177,19 @@
 				</label>
 
 				<label class="call-form__check-label">
-					<input id="check-input" class="checkbox-container__input" type="checkbox" checked>
-					<label for="check-input" class="checkbox-container call-form__checkbox">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14px"
+					<input id="check-input" class="checkbox-container__input js-call-order-checkbox" type="checkbox" onclick="checkboxSetValue();">
+					<label for="check-input" class="checkbox-container call-form__checkbox js-call-order-imit-checkbox" onclick="checkboxSetValue();">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="js-call-order-checkbox-apply" width="14px"
 							height="11px">
 							<path fill-rule="evenodd" fill="rgb(17, 17, 17)"
 								d="M13.399,1.307 L5.207,9.499 L5.399,9.692 L4.692,10.399 L4.500,10.207 L4.308,10.399 L3.600,9.692 L3.793,9.500 L0.600,6.307 L1.308,5.600 L4.500,8.792 L12.692,0.600 L13.399,1.307 Z" />
 						</svg>
+						<div class="call-form__error js-error-checkbox">JOBANIYROTETOERROR</div>
 					</label>
 
 
 
-					<span class="checkbox-container__text">
+					<span class="checkbox-container__text js-call-order-checkbox-text" onclick="checkboxSetValue();">
 						Согласен на <a href="" class="processing-pers-data">обработку персональных данных</a>
 					</span>
 
