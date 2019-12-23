@@ -14,8 +14,8 @@
 
 	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="icon" href="img/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
 	<!-- Template Basic Images End -->
 
 	<!-- Custom Browsers Color Start -->
@@ -26,8 +26,8 @@
 </head>
 
 <body>
-	<div class="page">
-		<div class="sidebar">
+	<main class="page">
+		<aside class="sidebar">
 			<div class="sidebar-container">
 				<div class="sidebar-logo">
 					<a href="/">
@@ -50,14 +50,16 @@
 								сантехники</a>
 						</li>
 					</ul>
-					<div class="sidebar-search">
+					<form class="sidebar-search">
 						<input type="text" class="sidebar-search__input" placeholder="Поиск">
-						<input type="button" class="sidebar-search__button" value="">
-					</div>
+						<input type="submit" class="sidebar-search__button" value="">
+					</form>
 					<div class="sidebar-files">
 						<a href="#" class="sidebar-files-item">
 							<div class="sidebar-files-item__icon-block">
-								<img src="./img/rub_icon.png" class="sidebar-files-item__icon">
+								<img
+									src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAaVBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8G612AAAAInRSTlMAKIOy8JRhwn1H+N3MSWYgWzB1wPOsp6CIZ2Q5EQX3xJ6Q60vplQAAAMZJREFUKM99UkkSgjAQnOxAAigooohL//+RFmSpcIhzSqenZ6dgjBsJSMMZ5cYErNJtq5WFyKiucXV81665xzdHlcsr8OCPEx3shF3DmuSfNM2WR7gdDON7HEXQOkHEUHv9hM93wuwrACNug/6Mfsv33IHlZFRO9DjvQBmSOieGl1doSWj9/0PgejMYPGpxJFRNkTiGSqZlSq4uuEg5U0AmlbtUGLReAmF5bDCFig2mkdDar4lwojjEwti70qIKq+3+HkPxfH5mVQyuM8/6fgAAAABJRU5ErkJggg=="
+									class="sidebar-files-item__icon">
 							</div>
 							<div class="sidebar-files-item__text">
 								<span class="sidebar-files-item__title">Прайс-лист</span>
@@ -66,17 +68,19 @@
 						</a>
 						<a href="#" class="sidebar-files-item">
 							<div class="sidebar-files-item__icon-block">
-								<img src="./img/file_icon.png" class="sidebar-files-item__icon">
+								<img
+									src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAXCAMAAADa6lTVAAAAWlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////9ZMre9AAAAHXRSTlMAMFDA8X9g0I9x4AiGQPjl5MG4plZKNBHrnUM6KsjuxGsAAACASURBVBjTpdHJFoIwDAXQtBmaAuKAglP+/zd1oZyGLHnLe9q+nAbIfAis5jbVwBK0STtkKKVkuIrI6yd44Y77jogef6mA7G7hWU/cH0lXYUS8QZZ37ApnRObNO0RT7NrMM4SZU+haVHVycjAsNnpZaJy93O0J7T+zWQbwu5AvfACwagxtJIJa3wAAAABJRU5ErkJggg=="
+									class="sidebar-files-item__icon">
 							</div>
 							<div class="sidebar-files-item__text">
 								<span class="sidebar-files-item__title">Каталог товаров</span>
 								<span class="sidebar-files-item__file">.pdf</span>
 							</div>
-						</a href="#">
+						</a>
 					</div>
 				</div>
 			</div>
-		</div>
+		</aside>
 		<div class="content">
 
 			<header class="main-header">
@@ -89,7 +93,7 @@
 									viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg">
 									<path fill="white" class="heroicon-ui main-header__menu-burger-path js-menu-burger-path"
 										d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
-									</svg>
+								</svg>
 								<div class="main-header__overlay-for-menu js-overlay-for-menu"></div>
 								<nav class="main-header__nav-list-wrap js-nav-list-wrap">
 									<div class="main-header__logo d-flex d-xl-none">
@@ -102,60 +106,33 @@
 												class="main-header__nav-item-link">Компания</a></li>
 										<li class="main-header__nav-item js-nav-item"><a href="#"
 												class="main-header__nav-item-link">Продукция</a>
-<?xml version="1.0" encoding="UTF-8"?><svg class="main-header__nav-item-arrow main-header__nav-item-arrow-svg js-nav-item-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="143pt" height="143pt" viewBox="0 0 143 143" version="1.1"><g id="surface1"><path fill="white" style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 141.535156 38.390625 L 134.375 31.226562 C 133.417969 30.273438 132.320312 29.796875 131.078125 29.796875 C 129.835938 29.796875 128.738281 30.273438 127.785156 31.226562 L 71.484375 87.527344 L 15.183594 31.230469 C 14.230469 30.273438 13.128906 29.796875 11.890625 29.796875 C 10.648438 29.796875 9.546875 30.273438 8.59375 31.230469 L 1.433594 38.390625 C 0.476562 39.347656 0 40.445312 0 41.6875 C 0 42.925781 0.476562 44.027344 1.433594 44.980469 L 68.1875 111.738281 C 69.140625 112.691406 70.242188 113.167969 71.484375 113.167969 C 72.722656 113.167969 73.820312 112.691406 74.777344 111.738281 L 141.535156 44.980469 C 142.488281 44.027344 142.964844 42.925781 142.964844 41.6875 C 142.964844 40.445312 142.488281 39.347656 141.535156 38.390625 Z M 141.535156 38.390625 "/></g></svg>
+											<?xml version="1.0" encoding="UTF-8"?><svg
+												class="main-header__nav-item-arrow main-header__nav-item-arrow-svg js-nav-item-arrow"
+												xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="143pt"
+												height="143pt" viewBox="0 0 143 143" version="1.1">
+												<g id="surface1">
+													<path fill="white" style=" stroke:none;fill-rule:nonzero;fill-opacity:1;"
+														d="M 141.535156 38.390625 L 134.375 31.226562 C 133.417969 30.273438 132.320312 29.796875 131.078125 29.796875 C 129.835938 29.796875 128.738281 30.273438 127.785156 31.226562 L 71.484375 87.527344 L 15.183594 31.230469 C 14.230469 30.273438 13.128906 29.796875 11.890625 29.796875 C 10.648438 29.796875 9.546875 30.273438 8.59375 31.230469 L 1.433594 38.390625 C 0.476562 39.347656 0 40.445312 0 41.6875 C 0 42.925781 0.476562 44.027344 1.433594 44.980469 L 68.1875 111.738281 C 69.140625 112.691406 70.242188 113.167969 71.484375 113.167969 C 72.722656 113.167969 73.820312 112.691406 74.777344 111.738281 L 141.535156 44.980469 C 142.488281 44.027344 142.964844 42.925781 142.964844 41.6875 C 142.964844 40.445312 142.488281 39.347656 141.535156 38.390625 Z M 141.535156 38.390625 " />
+												</g>
+											</svg>
 
 											<ul class="main-header__frst-sub-menu">
 												<div class="main-header__frst-sub-menu-wrap">
 													<li
 														class="main-header__nav-item js-nav-item main-header__frst-sub-menu-item js-frst-sub-menu-item">
 														<a href="#"
-															class="main-header__nav-item-link main-header__frst-sub-menu-item-link">Полям</a><?xml version="1.0" encoding="iso-8859-1"?>
+															class="main-header__nav-item-link main-header__frst-sub-menu-item-link">Полям</a>
+														<?xml version="1.0" encoding="iso-8859-1"?>
 
-<?xml version="1.0" encoding="UTF-8"?><svg class="main-header__frst-sub-menu-item-arrow js-frst-sub-menu-item-arrow main-header__nav-item-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="143pt" height="143pt" viewBox="0 0 143 143" version="1.1"><g id="surface1"><path fill="white" style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 141.535156 38.390625 L 134.375 31.226562 C 133.417969 30.273438 132.320312 29.796875 131.078125 29.796875 C 129.835938 29.796875 128.738281 30.273438 127.785156 31.226562 L 71.484375 87.527344 L 15.183594 31.230469 C 14.230469 30.273438 13.128906 29.796875 11.890625 29.796875 C 10.648438 29.796875 9.546875 30.273438 8.59375 31.230469 L 1.433594 38.390625 C 0.476562 39.347656 0 40.445312 0 41.6875 C 0 42.925781 0.476562 44.027344 1.433594 44.980469 L 68.1875 111.738281 C 69.140625 112.691406 70.242188 113.167969 71.484375 113.167969 C 72.722656 113.167969 73.820312 112.691406 74.777344 111.738281 L 141.535156 44.980469 C 142.488281 44.027344 142.964844 42.925781 142.964844 41.6875 C 142.964844 40.445312 142.488281 39.347656 141.535156 38.390625 Z M 141.535156 38.390625 "/></g></svg>
-														<ul class="main-header__sec-sub-menu js-sec-sub-menu">
-															<div class="main-header__sec-sub-menu-wrap">
-																<li class="main-header__nav-item js-nav-item main-header__sec-sub-menu-item"><a href="#"
-																		class="main-header__nav-item-link main-header__sec-sub-menu-item-link">Как сделать заказ</a></li>
-																<li class="main-header__nav-item js-nav-item main-header__sec-sub-menu-item"><a href="#"
-																		class="main-header__nav-item-link main-header__sec-sub-menu-item-link">Программы лояльности</a></li>
-																<li class="main-header__nav-item js-nav-item main-header__sec-sub-menu-item"><a href="#"
-																		class="main-header__nav-item-link main-header__sec-sub-menu-item-link">Подарочные сертификаты</a></li>
-															</div>
-														</ul>
-													</li>
-													<li
-														class="main-header__nav-item js-nav-item main-header__frst-sub-menu-item js-frst-sub-menu-item main-header__frst-sub-menu-item">
-														<a href="#"
-															class="main-header__nav-item-link main-header__frst-sub-menu-item-link">Поставщикам</a><?xml version="1.0" encoding="iso-8859-1"?>
-<?xml version="1.0" encoding="UTF-8"?><svg class="main-header__frst-sub-menu-item-arrow js-frst-sub-menu-item-arrow main-header__nav-item-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="143pt" height="143pt" viewBox="0 0 143 143" version="1.1"><g id="surface1"><path fill="white" style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 141.535156 38.390625 L 134.375 31.226562 C 133.417969 30.273438 132.320312 29.796875 131.078125 29.796875 C 129.835938 29.796875 128.738281 30.273438 127.785156 31.226562 L 71.484375 87.527344 L 15.183594 31.230469 C 14.230469 30.273438 13.128906 29.796875 11.890625 29.796875 C 10.648438 29.796875 9.546875 30.273438 8.59375 31.230469 L 1.433594 38.390625 C 0.476562 39.347656 0 40.445312 0 41.6875 C 0 42.925781 0.476562 44.027344 1.433594 44.980469 L 68.1875 111.738281 C 69.140625 112.691406 70.242188 113.167969 71.484375 113.167969 C 72.722656 113.167969 73.820312 112.691406 74.777344 111.738281 L 141.535156 44.980469 C 142.488281 44.027344 142.964844 42.925781 142.964844 41.6875 C 142.964844 40.445312 142.488281 39.347656 141.535156 38.390625 Z M 141.535156 38.390625 "/></g></svg>
-														<ul class="main-header__sec-sub-menu js-sec-sub-menu">
-															<div class="main-header__sec-sub-menu-wrap">
-																<li class="main-header__nav-item js-nav-item main-header__sec-sub-menu-item"><a href="#"
-																		class="main-header__nav-item-link main-header__sec-sub-menu-item-link">Как сделать заказ</a>
-																</li>
-																<li class="main-header__nav-item js-nav-item main-header__sec-sub-menu-item"><a href="#"
-																		class="main-header__nav-item-link main-header__sec-sub-menu-item-link">Программы лояльности</a>
-																</li>
-																<li class="main-header__nav-item js-nav-item main-header__sec-sub-menu-item"><a href="#"
-																		class="main-header__nav-item-link main-header__sec-sub-menu-item-link">Подарочные сертификаты</a></li>
-															</div>
-														</ul>
-													</li>
-												</div>
-											</ul>
-										</li>
-										<li class="main-header__nav-item js-nav-item"><a href="#"
-												class="main-header__nav-item-link">Услуги</a></li>
-										<li class="main-header__nav-item js-nav-item"><a href="#"
-												class="main-header__nav-item-link">Сотрудничество</a><?xml version="1.0" encoding="UTF-8"?><svg class="main-header__nav-item-arrow main-header__nav-item-arrow-svg js-nav-item-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="143pt" height="143pt" viewBox="0 0 143 143" version="1.1"><g id="surface1"><path fill="white" style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 141.535156 38.390625 L 134.375 31.226562 C 133.417969 30.273438 132.320312 29.796875 131.078125 29.796875 C 129.835938 29.796875 128.738281 30.273438 127.785156 31.226562 L 71.484375 87.527344 L 15.183594 31.230469 C 14.230469 30.273438 13.128906 29.796875 11.890625 29.796875 C 10.648438 29.796875 9.546875 30.273438 8.59375 31.230469 L 1.433594 38.390625 C 0.476562 39.347656 0 40.445312 0 41.6875 C 0 42.925781 0.476562 44.027344 1.433594 44.980469 L 68.1875 111.738281 C 69.140625 112.691406 70.242188 113.167969 71.484375 113.167969 C 72.722656 113.167969 73.820312 112.691406 74.777344 111.738281 L 141.535156 44.980469 C 142.488281 44.027344 142.964844 42.925781 142.964844 41.6875 C 142.964844 40.445312 142.488281 39.347656 141.535156 38.390625 Z M 141.535156 38.390625 "/></g></svg>
-											<ul class="main-header__frst-sub-menu">
-												<div class="main-header__frst-sub-menu-wrap">
-													<li
-														class="main-header__nav-item js-nav-item main-header__frst-sub-menu-item js-frst-sub-menu-item">
-														<a href="#"
-															class="main-header__nav-item-link main-header__frst-sub-menu-item-link">Покупателям</a>
-															
-<?xml version="1.0" encoding="UTF-8"?><svg class="main-header__frst-sub-menu-item-arrow js-frst-sub-menu-item-arrow main-header__nav-item-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="143pt" height="143pt" viewBox="0 0 143 143" version="1.1"><g id="surface1"><path fill="white" style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 141.535156 38.390625 L 134.375 31.226562 C 133.417969 30.273438 132.320312 29.796875 131.078125 29.796875 C 129.835938 29.796875 128.738281 30.273438 127.785156 31.226562 L 71.484375 87.527344 L 15.183594 31.230469 C 14.230469 30.273438 13.128906 29.796875 11.890625 29.796875 C 10.648438 29.796875 9.546875 30.273438 8.59375 31.230469 L 1.433594 38.390625 C 0.476562 39.347656 0 40.445312 0 41.6875 C 0 42.925781 0.476562 44.027344 1.433594 44.980469 L 68.1875 111.738281 C 69.140625 112.691406 70.242188 113.167969 71.484375 113.167969 C 72.722656 113.167969 73.820312 112.691406 74.777344 111.738281 L 141.535156 44.980469 C 142.488281 44.027344 142.964844 42.925781 142.964844 41.6875 C 142.964844 40.445312 142.488281 39.347656 141.535156 38.390625 Z M 141.535156 38.390625 "/></g></svg>
+														<?xml version="1.0" encoding="UTF-8"?><svg
+															class="main-header__frst-sub-menu-item-arrow js-frst-sub-menu-item-arrow main-header__nav-item-arrow-svg"
+															xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+															width="143pt" height="143pt" viewBox="0 0 143 143" version="1.1">
+															<g id="surface1">
+																<path fill="white" style=" stroke:none;fill-rule:nonzero;fill-opacity:1;"
+																	d="M 141.535156 38.390625 L 134.375 31.226562 C 133.417969 30.273438 132.320312 29.796875 131.078125 29.796875 C 129.835938 29.796875 128.738281 30.273438 127.785156 31.226562 L 71.484375 87.527344 L 15.183594 31.230469 C 14.230469 30.273438 13.128906 29.796875 11.890625 29.796875 C 10.648438 29.796875 9.546875 30.273438 8.59375 31.230469 L 1.433594 38.390625 C 0.476562 39.347656 0 40.445312 0 41.6875 C 0 42.925781 0.476562 44.027344 1.433594 44.980469 L 68.1875 111.738281 C 69.140625 112.691406 70.242188 113.167969 71.484375 113.167969 C 72.722656 113.167969 73.820312 112.691406 74.777344 111.738281 L 141.535156 44.980469 C 142.488281 44.027344 142.964844 42.925781 142.964844 41.6875 C 142.964844 40.445312 142.488281 39.347656 141.535156 38.390625 Z M 141.535156 38.390625 " />
+															</g>
+														</svg>
 														<ul class="main-header__sec-sub-menu js-sec-sub-menu">
 															<div class="main-header__sec-sub-menu-wrap">
 																<li class="main-header__nav-item js-nav-item main-header__sec-sub-menu-item"><a href="#"
@@ -173,8 +150,93 @@
 													<li
 														class="main-header__nav-item js-nav-item main-header__frst-sub-menu-item js-frst-sub-menu-item main-header__frst-sub-menu-item">
 														<a href="#"
-															class="main-header__nav-item-link main-header__frst-sub-menu-item-link">Поставщикам</a><?xml version="1.0" encoding="iso-8859-1"?>
-<?xml version="1.0" encoding="UTF-8"?><svg class="main-header__frst-sub-menu-item-arrow js-frst-sub-menu-item-arrow main-header__nav-item-arrow-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="143pt" height="143pt" viewBox="0 0 143 143" version="1.1"><g id="surface1"><path fill="white" style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 141.535156 38.390625 L 134.375 31.226562 C 133.417969 30.273438 132.320312 29.796875 131.078125 29.796875 C 129.835938 29.796875 128.738281 30.273438 127.785156 31.226562 L 71.484375 87.527344 L 15.183594 31.230469 C 14.230469 30.273438 13.128906 29.796875 11.890625 29.796875 C 10.648438 29.796875 9.546875 30.273438 8.59375 31.230469 L 1.433594 38.390625 C 0.476562 39.347656 0 40.445312 0 41.6875 C 0 42.925781 0.476562 44.027344 1.433594 44.980469 L 68.1875 111.738281 C 69.140625 112.691406 70.242188 113.167969 71.484375 113.167969 C 72.722656 113.167969 73.820312 112.691406 74.777344 111.738281 L 141.535156 44.980469 C 142.488281 44.027344 142.964844 42.925781 142.964844 41.6875 C 142.964844 40.445312 142.488281 39.347656 141.535156 38.390625 Z M 141.535156 38.390625 "/></g></svg>
+															class="main-header__nav-item-link main-header__frst-sub-menu-item-link">Поставщикам</a>
+														<?xml version="1.0" encoding="iso-8859-1"?>
+														<?xml version="1.0" encoding="UTF-8"?><svg
+															class="main-header__frst-sub-menu-item-arrow js-frst-sub-menu-item-arrow main-header__nav-item-arrow-svg"
+															xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+															width="143pt" height="143pt" viewBox="0 0 143 143" version="1.1">
+															<g id="surface1">
+																<path fill="white" style=" stroke:none;fill-rule:nonzero;fill-opacity:1;"
+																	d="M 141.535156 38.390625 L 134.375 31.226562 C 133.417969 30.273438 132.320312 29.796875 131.078125 29.796875 C 129.835938 29.796875 128.738281 30.273438 127.785156 31.226562 L 71.484375 87.527344 L 15.183594 31.230469 C 14.230469 30.273438 13.128906 29.796875 11.890625 29.796875 C 10.648438 29.796875 9.546875 30.273438 8.59375 31.230469 L 1.433594 38.390625 C 0.476562 39.347656 0 40.445312 0 41.6875 C 0 42.925781 0.476562 44.027344 1.433594 44.980469 L 68.1875 111.738281 C 69.140625 112.691406 70.242188 113.167969 71.484375 113.167969 C 72.722656 113.167969 73.820312 112.691406 74.777344 111.738281 L 141.535156 44.980469 C 142.488281 44.027344 142.964844 42.925781 142.964844 41.6875 C 142.964844 40.445312 142.488281 39.347656 141.535156 38.390625 Z M 141.535156 38.390625 " />
+															</g>
+														</svg>
+														<ul class="main-header__sec-sub-menu js-sec-sub-menu">
+															<div class="main-header__sec-sub-menu-wrap">
+																<li class="main-header__nav-item js-nav-item main-header__sec-sub-menu-item"><a href="#"
+																		class="main-header__nav-item-link main-header__sec-sub-menu-item-link">Как сделать
+																		заказ</a>
+																</li>
+																<li class="main-header__nav-item js-nav-item main-header__sec-sub-menu-item"><a href="#"
+																		class="main-header__nav-item-link main-header__sec-sub-menu-item-link">Программы
+																		лояльности</a>
+																</li>
+																<li class="main-header__nav-item js-nav-item main-header__sec-sub-menu-item"><a href="#"
+																		class="main-header__nav-item-link main-header__sec-sub-menu-item-link">Подарочные
+																		сертификаты</a></li>
+															</div>
+														</ul>
+													</li>
+												</div>
+											</ul>
+										</li>
+										<li class="main-header__nav-item js-nav-item"><a href="#"
+												class="main-header__nav-item-link">Услуги</a></li>
+										<li class="main-header__nav-item js-nav-item"><a href="#"
+												class="main-header__nav-item-link">Сотрудничество</a>
+											<?xml version="1.0" encoding="UTF-8"?><svg
+												class="main-header__nav-item-arrow main-header__nav-item-arrow-svg js-nav-item-arrow"
+												xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="143pt"
+												height="143pt" viewBox="0 0 143 143" version="1.1">
+												<g id="surface1">
+													<path fill="white" style=" stroke:none;fill-rule:nonzero;fill-opacity:1;"
+														d="M 141.535156 38.390625 L 134.375 31.226562 C 133.417969 30.273438 132.320312 29.796875 131.078125 29.796875 C 129.835938 29.796875 128.738281 30.273438 127.785156 31.226562 L 71.484375 87.527344 L 15.183594 31.230469 C 14.230469 30.273438 13.128906 29.796875 11.890625 29.796875 C 10.648438 29.796875 9.546875 30.273438 8.59375 31.230469 L 1.433594 38.390625 C 0.476562 39.347656 0 40.445312 0 41.6875 C 0 42.925781 0.476562 44.027344 1.433594 44.980469 L 68.1875 111.738281 C 69.140625 112.691406 70.242188 113.167969 71.484375 113.167969 C 72.722656 113.167969 73.820312 112.691406 74.777344 111.738281 L 141.535156 44.980469 C 142.488281 44.027344 142.964844 42.925781 142.964844 41.6875 C 142.964844 40.445312 142.488281 39.347656 141.535156 38.390625 Z M 141.535156 38.390625 " />
+												</g>
+											</svg>
+											<ul class="main-header__frst-sub-menu">
+												<div class="main-header__frst-sub-menu-wrap">
+													<li
+														class="main-header__nav-item js-nav-item main-header__frst-sub-menu-item js-frst-sub-menu-item">
+														<a href="#"
+															class="main-header__nav-item-link main-header__frst-sub-menu-item-link">Покупателям</a>
+
+														<?xml version="1.0" encoding="UTF-8"?><svg
+															class="main-header__frst-sub-menu-item-arrow js-frst-sub-menu-item-arrow main-header__nav-item-arrow-svg"
+															xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+															width="143pt" height="143pt" viewBox="0 0 143 143" version="1.1">
+															<g id="surface1">
+																<path fill="white" style=" stroke:none;fill-rule:nonzero;fill-opacity:1;"
+																	d="M 141.535156 38.390625 L 134.375 31.226562 C 133.417969 30.273438 132.320312 29.796875 131.078125 29.796875 C 129.835938 29.796875 128.738281 30.273438 127.785156 31.226562 L 71.484375 87.527344 L 15.183594 31.230469 C 14.230469 30.273438 13.128906 29.796875 11.890625 29.796875 C 10.648438 29.796875 9.546875 30.273438 8.59375 31.230469 L 1.433594 38.390625 C 0.476562 39.347656 0 40.445312 0 41.6875 C 0 42.925781 0.476562 44.027344 1.433594 44.980469 L 68.1875 111.738281 C 69.140625 112.691406 70.242188 113.167969 71.484375 113.167969 C 72.722656 113.167969 73.820312 112.691406 74.777344 111.738281 L 141.535156 44.980469 C 142.488281 44.027344 142.964844 42.925781 142.964844 41.6875 C 142.964844 40.445312 142.488281 39.347656 141.535156 38.390625 Z M 141.535156 38.390625 " />
+															</g>
+														</svg>
+														<ul class="main-header__sec-sub-menu js-sec-sub-menu">
+															<div class="main-header__sec-sub-menu-wrap">
+																<li class="main-header__nav-item js-nav-item main-header__sec-sub-menu-item"><a href="#"
+																		class="main-header__nav-item-link main-header__sec-sub-menu-item-link">Как сделать
+																		заказ</a></li>
+																<li class="main-header__nav-item js-nav-item main-header__sec-sub-menu-item"><a href="#"
+																		class="main-header__nav-item-link main-header__sec-sub-menu-item-link">Программы
+																		лояльности</a></li>
+																<li class="main-header__nav-item js-nav-item main-header__sec-sub-menu-item"><a href="#"
+																		class="main-header__nav-item-link main-header__sec-sub-menu-item-link">Подарочные
+																		сертификаты</a></li>
+															</div>
+														</ul>
+													</li>
+													<li
+														class="main-header__nav-item js-nav-item main-header__frst-sub-menu-item js-frst-sub-menu-item main-header__frst-sub-menu-item">
+														<a href="#"
+															class="main-header__nav-item-link main-header__frst-sub-menu-item-link">Поставщикам</a>
+														<?xml version="1.0" encoding="iso-8859-1"?>
+														<?xml version="1.0" encoding="UTF-8"?><svg
+															class="main-header__frst-sub-menu-item-arrow js-frst-sub-menu-item-arrow main-header__nav-item-arrow-svg"
+															xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+															width="143pt" height="143pt" viewBox="0 0 143 143" version="1.1">
+															<g id="surface1">
+																<path fill="white" style=" stroke:none;fill-rule:nonzero;fill-opacity:1;"
+																	d="M 141.535156 38.390625 L 134.375 31.226562 C 133.417969 30.273438 132.320312 29.796875 131.078125 29.796875 C 129.835938 29.796875 128.738281 30.273438 127.785156 31.226562 L 71.484375 87.527344 L 15.183594 31.230469 C 14.230469 30.273438 13.128906 29.796875 11.890625 29.796875 C 10.648438 29.796875 9.546875 30.273438 8.59375 31.230469 L 1.433594 38.390625 C 0.476562 39.347656 0 40.445312 0 41.6875 C 0 42.925781 0.476562 44.027344 1.433594 44.980469 L 68.1875 111.738281 C 69.140625 112.691406 70.242188 113.167969 71.484375 113.167969 C 72.722656 113.167969 73.820312 112.691406 74.777344 111.738281 L 141.535156 44.980469 C 142.488281 44.027344 142.964844 42.925781 142.964844 41.6875 C 142.964844 40.445312 142.488281 39.347656 141.535156 38.390625 Z M 141.535156 38.390625 " />
+															</g>
+														</svg>
 														<ul class="main-header__sec-sub-menu js-sec-sub-menu">
 															<div class="main-header__sec-sub-menu-wrap">
 																<li class="main-header__nav-item js-nav-item main-header__sec-sub-menu-item"><a href="#"
@@ -212,14 +274,16 @@
 													сантехники</a>
 											</li>
 										</ul>
-										<div class="sidebar-search">
+										<form class="sidebar-search">
 											<input type="text" class="sidebar-search__input" placeholder="Поиск">
-											<input type="button" class="sidebar-search__button" value="">
-										</div>
+											<input type="submit" class="sidebar-search__button" value="">
+										</form>
 										<div class="sidebar-files">
 											<a href="#" class="sidebar-files-item">
 												<div class="sidebar-files-item__icon-block">
-													<img src="./img/rub_icon.png" class="sidebar-files-item__icon">
+													<img
+														src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAaVBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8G612AAAAInRSTlMAKIOy8JRhwn1H+N3MSWYgWzB1wPOsp6CIZ2Q5EQX3xJ6Q60vplQAAAMZJREFUKM99UkkSgjAQnOxAAigooohL//+RFmSpcIhzSqenZ6dgjBsJSMMZ5cYErNJtq5WFyKiucXV81665xzdHlcsr8OCPEx3shF3DmuSfNM2WR7gdDON7HEXQOkHEUHv9hM93wuwrACNug/6Mfsv33IHlZFRO9DjvQBmSOieGl1doSWj9/0PgejMYPGpxJFRNkTiGSqZlSq4uuEg5U0AmlbtUGLReAmF5bDCFig2mkdDar4lwojjEwti70qIKq+3+HkPxfH5mVQyuM8/6fgAAAABJRU5ErkJggg=="
+														class="sidebar-files-item__icon">
 												</div>
 												<div class="sidebar-files-item__text">
 													<span class="sidebar-files-item__title">Прайс-лист</span>
@@ -228,7 +292,9 @@
 											</a>
 											<a href="#" class="sidebar-files-item">
 												<div class="sidebar-files-item__icon-block">
-													<img src="./img/file_icon.png" class="sidebar-files-item__icon">
+													<img
+														src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAXCAMAAADa6lTVAAAAWlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////9ZMre9AAAAHXRSTlMAMFDA8X9g0I9x4AiGQPjl5MG4plZKNBHrnUM6KsjuxGsAAACASURBVBjTpdHJFoIwDAXQtBmaAuKAglP+/zd1oZyGLHnLe9q+nAbIfAis5jbVwBK0STtkKKVkuIrI6yd44Y77jogef6mA7G7hWU/cH0lXYUS8QZZ37ApnRObNO0RT7NrMM4SZU+haVHVycjAsNnpZaJy93O0J7T+zWQbwu5AvfACwagxtJIJa3wAAAABJRU5ErkJggg=="
+														class="sidebar-files-item__icon">
 												</div>
 												<div class="sidebar-files-item__text">
 													<span class="sidebar-files-item__title">Каталог товаров</span>
@@ -248,16 +314,21 @@
 										</div>
 									</div>
 									<div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-5 main-header__order-call-wrap">
-									<?xml version="1.0" encoding="UTF-8"?>
-									<svg data-popup="call-popup" class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-none main-header__order-call-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="402pt" height="402pt" viewBox="0 0 402 402" version="1.1">
-									<g id="surface1">
-									<path fill="white" style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 401.128906 311.476562 C 399.992188 308.050781 392.757812 303.003906 379.433594 296.347656 C 375.820312 294.246094 370.679688 291.398438 364.023438 287.78125 C 357.359375 284.164062 351.3125 280.828125 345.890625 277.785156 C 340.460938 274.738281 335.371094 271.789062 330.617188 268.9375 C 329.855469 268.367188 327.476562 266.703125 323.480469 263.9375 C 319.480469 261.179688 316.105469 259.132812 313.339844 257.796875 C 310.582031 256.472656 307.867188 255.804688 305.203125 255.804688 C 301.394531 255.804688 296.640625 258.515625 290.933594 263.9375 C 285.226562 269.367188 279.988281 275.261719 275.234375 281.644531 C 270.476562 288.023438 265.433594 293.917969 260.109375 299.34375 C 254.777344 304.769531 250.394531 307.480469 246.972656 307.480469 C 245.253906 307.480469 243.113281 307.003906 240.546875 306.058594 C 237.980469 305.105469 236.027344 304.292969 234.6875 303.636719 C 233.359375 302.964844 231.082031 301.636719 227.84375 299.632812 C 224.597656 297.632812 222.796875 296.535156 222.414062 296.347656 C 196.339844 281.878906 173.976562 265.316406 155.320312 246.671875 C 136.671875 228.011719 120.109375 205.652344 105.644531 179.574219 C 105.457031 179.191406 104.359375 177.382812 102.363281 174.148438 C 100.363281 170.910156 99.027344 168.632812 98.363281 167.296875 C 97.695312 165.964844 96.886719 164.011719 95.9375 161.441406 C 94.988281 158.875 94.511719 156.734375 94.511719 155.019531 C 94.511719 151.59375 97.222656 147.214844 102.648438 141.886719 C 108.074219 136.558594 113.976562 131.511719 120.347656 126.757812 C 126.726562 122.003906 132.625 116.765625 138.050781 111.058594 C 143.472656 105.347656 146.1875 100.589844 146.1875 96.785156 C 146.1875 94.121094 145.519531 91.40625 144.1875 88.648438 C 142.855469 85.882812 140.8125 82.507812 138.050781 78.511719 C 135.289062 74.511719 133.621094 72.136719 133.050781 71.371094 C 130.199219 66.617188 127.253906 61.523438 124.203125 56.101562 C 121.152344 50.675781 117.824219 44.628906 114.207031 37.96875 C 110.59375 31.3125 107.738281 26.171875 105.644531 22.554688 C 98.984375 9.234375 93.941406 1.996094 90.515625 0.859375 C 89.183594 0.289062 87.183594 0 84.519531 0 C 79.378906 0 72.671875 0.949219 64.390625 2.855469 C 56.109375 4.757812 49.59375 6.753906 44.835938 8.851562 C 35.316406 12.847656 25.230469 24.457031 14.570312 43.679688 C 4.863281 61.566406 0.0117188 79.269531 0.0117188 96.78125 C 0.0117188 101.914062 0.34375 106.910156 1.007812 111.769531 C 1.675781 116.621094 2.863281 122.09375 4.578125 128.1875 C 6.292969 134.277344 7.671875 138.800781 8.71875 141.746094 C 9.761719 144.695312 11.714844 149.976562 14.570312 157.59375 C 17.421875 165.207031 19.136719 169.867188 19.707031 171.578125 C 26.367188 190.234375 34.265625 206.886719 43.402344 221.542969 C 58.433594 245.90625 78.941406 271.082031 104.921875 297.066406 C 130.902344 323.046875 156.074219 343.554688 180.441406 358.589844 C 195.09375 367.726562 211.753906 375.621094 230.40625 382.289062 C 232.117188 382.855469 236.78125 384.566406 244.390625 387.429688 C 252.003906 390.285156 257.289062 392.234375 260.234375 393.28125 C 263.183594 394.328125 267.710938 395.710938 273.796875 397.425781 C 279.894531 399.140625 285.359375 400.332031 290.214844 401.003906 C 295.070312 401.660156 300.066406 402 305.203125 402 C 322.710938 402 340.417969 397.144531 358.308594 387.4375 C 377.527344 376.78125 389.132812 366.691406 393.132812 357.167969 C 395.234375 352.414062 397.222656 345.894531 399.128906 337.613281 C 401.035156 329.335938 401.984375 322.628906 401.984375 317.488281 C 401.988281 314.8125 401.703125 312.820312 401.128906 311.476562 Z M 401.128906 311.476562 "/>
-									</g>
-									</svg>
+										<?xml version="1.0" encoding="UTF-8"?>
+										<svg data-popup="call-popup"
+											class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-none main-header__order-call-icon-svg"
+											xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="402pt"
+											height="402pt" viewBox="0 0 402 402" version="1.1">
+											<g id="surface1">
+												<path fill="white"
+													style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;"
+													d="M 401.128906 311.476562 C 399.992188 308.050781 392.757812 303.003906 379.433594 296.347656 C 375.820312 294.246094 370.679688 291.398438 364.023438 287.78125 C 357.359375 284.164062 351.3125 280.828125 345.890625 277.785156 C 340.460938 274.738281 335.371094 271.789062 330.617188 268.9375 C 329.855469 268.367188 327.476562 266.703125 323.480469 263.9375 C 319.480469 261.179688 316.105469 259.132812 313.339844 257.796875 C 310.582031 256.472656 307.867188 255.804688 305.203125 255.804688 C 301.394531 255.804688 296.640625 258.515625 290.933594 263.9375 C 285.226562 269.367188 279.988281 275.261719 275.234375 281.644531 C 270.476562 288.023438 265.433594 293.917969 260.109375 299.34375 C 254.777344 304.769531 250.394531 307.480469 246.972656 307.480469 C 245.253906 307.480469 243.113281 307.003906 240.546875 306.058594 C 237.980469 305.105469 236.027344 304.292969 234.6875 303.636719 C 233.359375 302.964844 231.082031 301.636719 227.84375 299.632812 C 224.597656 297.632812 222.796875 296.535156 222.414062 296.347656 C 196.339844 281.878906 173.976562 265.316406 155.320312 246.671875 C 136.671875 228.011719 120.109375 205.652344 105.644531 179.574219 C 105.457031 179.191406 104.359375 177.382812 102.363281 174.148438 C 100.363281 170.910156 99.027344 168.632812 98.363281 167.296875 C 97.695312 165.964844 96.886719 164.011719 95.9375 161.441406 C 94.988281 158.875 94.511719 156.734375 94.511719 155.019531 C 94.511719 151.59375 97.222656 147.214844 102.648438 141.886719 C 108.074219 136.558594 113.976562 131.511719 120.347656 126.757812 C 126.726562 122.003906 132.625 116.765625 138.050781 111.058594 C 143.472656 105.347656 146.1875 100.589844 146.1875 96.785156 C 146.1875 94.121094 145.519531 91.40625 144.1875 88.648438 C 142.855469 85.882812 140.8125 82.507812 138.050781 78.511719 C 135.289062 74.511719 133.621094 72.136719 133.050781 71.371094 C 130.199219 66.617188 127.253906 61.523438 124.203125 56.101562 C 121.152344 50.675781 117.824219 44.628906 114.207031 37.96875 C 110.59375 31.3125 107.738281 26.171875 105.644531 22.554688 C 98.984375 9.234375 93.941406 1.996094 90.515625 0.859375 C 89.183594 0.289062 87.183594 0 84.519531 0 C 79.378906 0 72.671875 0.949219 64.390625 2.855469 C 56.109375 4.757812 49.59375 6.753906 44.835938 8.851562 C 35.316406 12.847656 25.230469 24.457031 14.570312 43.679688 C 4.863281 61.566406 0.0117188 79.269531 0.0117188 96.78125 C 0.0117188 101.914062 0.34375 106.910156 1.007812 111.769531 C 1.675781 116.621094 2.863281 122.09375 4.578125 128.1875 C 6.292969 134.277344 7.671875 138.800781 8.71875 141.746094 C 9.761719 144.695312 11.714844 149.976562 14.570312 157.59375 C 17.421875 165.207031 19.136719 169.867188 19.707031 171.578125 C 26.367188 190.234375 34.265625 206.886719 43.402344 221.542969 C 58.433594 245.90625 78.941406 271.082031 104.921875 297.066406 C 130.902344 323.046875 156.074219 343.554688 180.441406 358.589844 C 195.09375 367.726562 211.753906 375.621094 230.40625 382.289062 C 232.117188 382.855469 236.78125 384.566406 244.390625 387.429688 C 252.003906 390.285156 257.289062 392.234375 260.234375 393.28125 C 263.183594 394.328125 267.710938 395.710938 273.796875 397.425781 C 279.894531 399.140625 285.359375 400.332031 290.214844 401.003906 C 295.070312 401.660156 300.066406 402 305.203125 402 C 322.710938 402 340.417969 397.144531 358.308594 387.4375 C 377.527344 376.78125 389.132812 366.691406 393.132812 357.167969 C 395.234375 352.414062 397.222656 345.894531 399.128906 337.613281 C 401.035156 329.335938 401.984375 322.628906 401.984375 317.488281 C 401.988281 314.8125 401.703125 312.820312 401.128906 311.476562 Z M 401.128906 311.476562 " />
+											</g>
+										</svg>
 
 
 										<!-- <i data-popup="call-popup" class="fa fa-phone fa-2x d-flex d-sm-flex d-md-flex d-lg-flex d-xl-none" -->
-											<!-- aria-hidden="true"></i> -->
+										<!-- aria-hidden="true"></i> -->
 										<a href="#" data-popup="call-popup"
 											class="main-header__order-call d-none d-sm-none d-md-none d-lg-none d-lg-none d-xl-flex">Заказать
 											звонок</a>
@@ -315,7 +386,7 @@
 					</div>
 					<div class="main-header__swiper-pagination"></div>
 					<div class="main-header-nav__prev-wrap">
-						<img src="img/arrow_slider_prev.png" class="main-header-nav__prev-arrow" alt="">
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAXBAMAAAAiiNiyAAAAJ1BMVEUAAAD///////////////////////////////////////////////+uPUo5AAAADXRSTlMAH95p228cw8LBpREQh32PtgAAADNJREFUCNdjAIOMDWCKzRXCTQlA4YpAuIzKEK6QARFchioGOB8qT1DAlQFuPcR+nAKZBwASWQjuTgM+aAAAAABJRU5ErkJggg==" class="main-header-nav__prev-arrow" alt="">
 						<svg xmlns="http://www.w3.org/2000/svg" width="45" height="248" viewBox="0 0 45 248"
 							class="main-header-nav__prev">
 							<metadata>
@@ -342,7 +413,7 @@
 						</svg>
 					</div>
 					<div class="main-header-nav__next-wrap">
-						<img src="img/arrow_slider_next.png" class="main-header-nav__next-arrow" alt="">
+						<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAXBAMAAAAiiNiyAAAAJ1BMVEUAAAD///////////////////////////////////////////////+uPUo5AAAADXRSTlMA3WwcHnBnIBDDwsGkXIFDRwAAADtJREFUCNdj6DRgAANWYQYICIQKMMEEFB2gAiK4BBILIDSbOJoAzwIYHyoPNwChH5NrgOKgQFRuN4QLAArnCFr0tTlqAAAAAElFTkSuQmCC" class="main-header-nav__next-arrow" alt="">
 						<svg xmlns="http://www.w3.org/2000/svg" width="45" height="248" viewBox="0 0 45 248"
 							class="main-header-nav__next">
 							<metadata>
@@ -402,7 +473,7 @@
 							<a href="#" class="production-block__more-about">
 								<span class="production-block__more-about-text">Подробнее о компании</span>
 								<span class="production-block__more-about-button round-button"><img class="round-button__img"
-										src="img/arrow-right.png" alt=""></span>
+										src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAALBAMAAABSacpvAAAAJFBMVEUAAAAJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQnoSIaGAAAAC3RSTlMA3R9rHG8Q5cPBaB/z2YoAAAAtSURBVAjXYwCBDAcGCGAVYYACQwUog1kIJrRQgWE3BBTAFaGpCVRAMycTaDIAu/QJD+VxPx0AAAAASUVORK5CYII=" alt=""></span>
 							</a>
 							<div class="production-block__img-wrap">
 								<img src="img/product-illustration.png" alt="" class="production-block__img">
@@ -453,7 +524,9 @@
 				<div class="row news-slider swiper-container">
 					<div class="news-title">
 						<h2 class="news-title__text">Новинки</h2>
-						<img src="./img/leaf.png" alt="" class="news-title__img">
+						<img
+							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAaCAMAAAAngDq0AAAAdVBMVEUAAACu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5PppYSNqAAAAJnRSTlMA5A8D9b9i+uog8tzKtLBwaktFOyrPuqCblIZaVVAxHRoUCwakmAJFcDIAAAC+SURBVDjLvdTXEYMwEEVRhECAyTljgq3+S3QH7P1gfAs483YY5Ai51ZS1YWBvC/uijo5bRy9ZYMWySkuDtImtnL85Yk0CIM84cosHJLUBqbCg+A0kQyQVAakOgBTUQHKVBeUOaCCST6SSSF702HkFGdX/97zXc+cZMupDpI5IKzqP/DB7SKgZSGdCpC+QrpRI6QU+no+kEzybMZFGLUI69wAUrvKkCr3kkysuKjsAtbkAHc08KAF5KX80uzToB4z2jks2+P4+AAAAAElFTkSuQmCC"
+							alt="" class="news-title__img">
 					</div>
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
@@ -590,7 +663,9 @@
 				<div class="row news-slider swiper-container">
 					<div class="news-title">
 						<h2 class="news-title__text">Хиты продаж</h2>
-						<img src="./img/leaf.png" alt="" class="news-title__img">
+						<img
+							src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAaCAMAAAAngDq0AAAAdVBMVEUAAACu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5PppYSNqAAAAJnRSTlMA5A8D9b9i+uog8tzKtLBwaktFOyrPuqCblIZaVVAxHRoUCwakmAJFcDIAAAC+SURBVDjLvdTXEYMwEEVRhECAyTljgq3+S3QH7P1gfAs483YY5Ai51ZS1YWBvC/uijo5bRy9ZYMWySkuDtImtnL85Yk0CIM84cosHJLUBqbCg+A0kQyQVAakOgBTUQHKVBeUOaCCST6SSSF702HkFGdX/97zXc+cZMupDpI5IKzqP/DB7SKgZSGdCpC+QrpRI6QU+no+kEzybMZFGLUI69wAUrvKkCr3kkysuKjsAtbkAHc08KAF5KX80uzToB4z2jks2+P4+AAAAAElFTkSuQmCC"
+							alt="" class="news-title__img">
 					</div>
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
@@ -731,11 +806,13 @@
 							<div class="special-offers__slider offers-slider swiper-container">
 								<div class="news-title special-offers__title">
 									<h2 class="news-title__text">Спецпредложения</h2>
-									<img src="./img/leaf.png" alt="" class="news-title__img">
+									<img
+										src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAaCAMAAAAngDq0AAAAdVBMVEUAAACu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5PppYSNqAAAAJnRSTlMA5A8D9b9i+uog8tzKtLBwaktFOyrPuqCblIZaVVAxHRoUCwakmAJFcDIAAAC+SURBVDjLvdTXEYMwEEVRhECAyTljgq3+S3QH7P1gfAs483YY5Ai51ZS1YWBvC/uijo5bRy9ZYMWySkuDtImtnL85Yk0CIM84cosHJLUBqbCg+A0kQyQVAakOgBTUQHKVBeUOaCCST6SSSF702HkFGdX/97zXc+cZMupDpI5IKzqP/DB7SKgZSGdCpC+QrpRI6QU+no+kEzybMZFGLUI69wAUrvKkCr3kkysuKjsAtbkAHc08KAF5KX80uzToB4z2jks2+P4+AAAAAElFTkSuQmCC"
+										alt="" class="news-title__img">
 								</div>
 
 								<div class="swiper-wrapper">
-									
+
 									<!-- START OFFERS ITEM -->
 									<div class="swiper-slide">
 										<div class="offers-slider__item swiper-slide" style="background-image: url('img/offers-bg.png');">
@@ -911,50 +988,42 @@
 			<section class="block properties">
 				<div class="news-title properties__title">
 					<h2 class="news-title__text">Конкурентные преимущества</h2>
-					<img src="./img/leaf.png" alt="" class="news-title__img news-title__img_hide">
+					<img
+						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAAAaCAMAAAAngDq0AAAAdVBMVEUAAACu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5Pqu5PppYSNqAAAAJnRSTlMA5A8D9b9i+uog8tzKtLBwaktFOyrPuqCblIZaVVAxHRoUCwakmAJFcDIAAAC+SURBVDjLvdTXEYMwEEVRhECAyTljgq3+S3QH7P1gfAs483YY5Ai51ZS1YWBvC/uijo5bRy9ZYMWySkuDtImtnL85Yk0CIM84cosHJLUBqbCg+A0kQyQVAakOgBTUQHKVBeUOaCCST6SSSF702HkFGdX/97zXc+cZMupDpI5IKzqP/DB7SKgZSGdCpC+QrpRI6QU+no+kEzybMZFGLUI69wAUrvKkCr3kkysuKjsAtbkAHc08KAF5KX80uzToB4z2jks2+P4+AAAAAElFTkSuQmCC"
+						alt="" class="news-title__img news-title__img_hide">
 				</div>
-				<div class="properties-items">
-					<div class="properties-item">
-						<svg class="properties-item__icon" xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink" width="82" height="71" viewBox="0 0 82 71">
-							<image id="Icon" width="82" height="71"
-								xlink:href="data:img/png;base64,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" />
-						</svg>
+				<ul class="properties-items">
+					<li class="properties-item">
+						<div class="properties-item__icon-block">
+							<img src="./img/Icon-3.png" alt="" class="properties-item__icon">
+						</div>
 						<span class="properties-item__text">Собственное производство</span>
-					</div>
-					<div class="properties-item">
-						<svg class="properties-item__icon" xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink" width="73" height="73" viewBox="0 0 73 73">
-							<image id="Icon" width="73" height="73"
-								xlink:href="data:img/png;base64,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" />
-						</svg>
+					</li>
+					<li class="properties-item">
+						<div class="properties-item__icon-block">
+							<img src="./img/Icon-2.png" alt="" class="properties-item__icon">
+						</div>
 						<span class="properties-item__text">Индивидуальный подход</span>
-					</div>
-					<div class="properties-item">
-						<svg class="properties-item__icon" xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink" width="68" height="76" viewBox="0 0 68 76">
-							<image id="Icon" width="68" height="76"
-								xlink:href="data:img/png;base64,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" />
-						</svg>
+					</li>
+					<li class="properties-item">
+						<div class="properties-item__icon-block">
+							<img src="./img/Icon.png" alt="" class="properties-item__icon">
+						</div>
 						<span class="properties-item__text">Высокое качество товаров</span>
-					</div>
-					<div class="properties-item">
-						<svg class="properties-item__icon" xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="76" viewBox="0 0 70 76">
-							<image id="Icon" width="70" height="76"
-								xlink:href="data:img/png;base64,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" />
-						</svg>
+					</li>
+					<li class="properties-item">
+						<div class="properties-item__icon-block">
+							<img src="./img/Icon-1.png" alt="" class="properties-item__icon">
+						</div>
 						<span class="properties-item__text">Разумные <br> цены</span>
-					</div>
-					<div class="properties-item">
-						<svg class="properties-item__icon" xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink" width="73" height="71" viewBox="0 0 73 71">
-							<image id="Icon" width="73" height="71"
-								xlink:href="data:img/png;base64,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" />
-						</svg>
+					</li>
+					<li class="properties-item">
+						<div class="properties-item__icon-block">
+							<img src="./img/Icon-4.png" alt="" class="properties-item__icon">
+						</div>
 						<span class="properties-item__text">Устойчивое развитие</span>
-					</div>
-				</div>
+					</li>
+				</ul>
 			</section>
 			<!-- END PROPERTIES -->
 
@@ -1028,7 +1097,8 @@
 						</ul>
 					</div>
 					<div class="col-lg-3 col-md-6 col-12 footer-menu__block footer-menu__block_right">
-						<h5 class="footer-menu__title js-footer-menu__title"><a class="footer-menu__title" href="#">Контакты</a></h5>
+						<h5 class="footer-menu__title js-footer-menu__title"><a class="footer-menu__title" href="#">Контакты</a>
+						</h5>
 					</div>
 				</div>
 				<div class="block row footer-info">
@@ -1080,7 +1150,7 @@
 			<!-- END FOOTER -->
 
 		</div>
-	</div>
+	</main>
 
 
 	<div id="call-popup" class="popup">

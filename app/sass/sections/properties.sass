@@ -8,6 +8,7 @@
 		justify-content: space-between
 		padding-left: 22px
 		padding-right: 22px
+		list-style-type: none
 	&-item
 		max-width: 280px
 		min-width: 220px
@@ -15,10 +16,18 @@
 			margin-right: 0
 		&:last-child
 			margin-right: 0
-		&__icon
+		&__icon-block
 			display: block
-			margin: 0 auto
 			height: 76px
+			position: relative
+		&__icon
+			max-width: 71px
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			margin: auto
 		&__text
 			display: block
 			font-size: 16px
@@ -48,8 +57,9 @@
 		&-item
 			min-width: 120px
 			max-width: 130px
+			&__icon-block
+				height: 65px
 			&__icon
-				max-height: 65px
 				max-width: 64px
 			&__text
 				font-size: 14px
@@ -71,8 +81,9 @@
 			min-width: 140px
 			max-width: 140px
 			&__icon
-				max-height: 50px
 				max-width: 50px
+			&__icon-block
+				height: 50px
 			&__text
 				br
 					display: none
@@ -81,3 +92,7 @@
 	.properties
 		padding-left: 15px
 		padding-right: 15px
+		padding-bottom: 60px
+		&-item
+			&__text
+				margin-top: 15px

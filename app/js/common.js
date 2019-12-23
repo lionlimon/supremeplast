@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	var menu = document.querySelector('.js-nav-list-wrap');
 	var oo = false;
 
-	function resetall() {
+	function resetAll() {
 		if (frstsublist.length > 0)
 			frstsublist.forEach(function (el, index) {
 				el.querySelector('.main-header__frst-sub-menu-item-link').classList.remove('active');
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			})
 	}
 
-	function resetscndsublist() {
+	function resetScndSublist() {
 		if (frstsublist.length > 0)
 			frstsublist.forEach(function (el, index) {
 				el.querySelector('.main-header__frst-sub-menu-item-link').classList.remove('active');
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				var navit = this.closest('.js-nav-item');
 				if (navit.querySelector('.main-header__frst-sub-menu')) {
 					if (navit.querySelector('.main-header__frst-sub-menu').style.display != 'block') {
-						resetall();
+						resetAll();
 						navit.querySelector('.main-header__frst-sub-menu').style.display = 'block';
 						el.classList.add('active');
 						if (!navit.querySelector('.main-header__nav-item-link').classList.contains('main-header__frst-sub-menu-item-link')) {
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				var navit = this.closest('.js-nav-item');
 				if (navit.querySelector('.js-sec-sub-menu')) {
 					if (navit.querySelector('.js-sec-sub-menu').style.display != 'block') {
-						resetscndsublist();
+						resetScndSublist();
 						navit.querySelector('.js-sec-sub-menu').style.display = 'block';
 						el.classList.add('active');
 						navit.querySelector('.main-header__nav-item-link').classList.add('active');
@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
 			overlay.style.display = 'none';
 			menu.style.left = '-280px';
-			resetall();
+			resetAll();
 			if (oo != true) {
 				if (frstsublist.length > 0)
 					frstsublist.forEach(function (el, index) {
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
-	if (document.getElementsByClassName('news-slider').length > 0) {
+	if (document.querySelectorAll('.news-slider')) {
 		var newsSwiper = new Swiper('.news-slider', {
 			slidesPerView: 2,
 			spaceBetween: 40,
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	}
 
-	if (document.querySelectorAll('.main-header__slider').length) {
+	if (document.querySelectorAll('.main-header__slider')) {
 		var headerSwiper = new Swiper('.main-header__slider', {
 			slidesPerView: 1,
 			loop: true,
@@ -294,20 +294,11 @@ document.addEventListener('DOMContentLoaded', function () {
 				type: 'fraction',
 			},
 			navigation: {
-				nextEl: '.main-header-nav__next',
-				prevEl: '.main-header-nav__prev'
+				nextEl: '.main-header-nav__next-wrap',
+				prevEl: '.main-header-nav__prev-wrap'
 			}
 		})
 	}
-
-
-	document.querySelector('.main-header-nav__next-arrow').addEventListener('click', function () {
-		headerSwiper.slideNext();
-	})
-
-	document.querySelector('.main-header-nav__prev-arrow').addEventListener('click', function () {
-		headerSwiper.slidePrev();
-	})
 
 	var list = document.querySelectorAll('.js-footer-menu__title');
 	var link = document.querySelectorAll('.footer-menu__link');
@@ -381,7 +372,7 @@ function mask(event) {
 
 
 
-if (document.querySelectorAll('input[name="phone"]').length) {
+if (document.querySelectorAll('input[name="phone"]')) {
 	document.querySelectorAll('input[name="phone"]').forEach(function (e) {
 		e.addEventListener("input", mask, false);
 	});
@@ -389,7 +380,7 @@ if (document.querySelectorAll('input[name="phone"]').length) {
 
 
 // Popup 
-if (document.querySelectorAll('[data-popup]').length) {
+if (document.querySelectorAll('[data-popup]')) {
 
 	document.querySelectorAll('.popup').forEach(function (e) {
 		var popup = e;
@@ -422,7 +413,7 @@ if (document.querySelectorAll('[data-popup]').length) {
 }
 
 // popup-mini
-if (document.querySelectorAll('.js-popup-mini-open').length) {
+if (document.querySelectorAll('.js-popup-mini-open')) {
 	var link = document.querySelectorAll('.js-popup-mini-open');
 
 	link.forEach(function (e) {
