@@ -259,6 +259,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			autoplay: {
 				delay: 3000,
 			},
+			speed: 550,
 			pagination: {
 				el: '.main-header__swiper-pagination',
 				type: 'fraction',
