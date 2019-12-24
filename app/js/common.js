@@ -622,3 +622,22 @@ function validate() {
 // 		// return false;
 
 // })
+
+(function() {
+	// Add event listener
+	var elem = document.querySelector(".material-block");
+	elem.addEventListener("mousemove", parallax);
+	// Magic happens here
+	function parallax(e) {
+			var _w = window.innerWidth/2;
+			var _h = window.innerHeight/2;
+			var _mouseX = e.clientX;
+			var _mouseY = e.clientY;
+			var _depth1X = 50 - (_mouseX - _w) * 0.004;
+			var _depth1Y = 50 - (_mouseY - _h) * 0.004;
+			var _depth2X = 50 - (_mouseX - _w) * 0.008;
+			var _depth2Y = 50 - (_mouseY - _h) * 0.008;
+			var x = _depth1X + '% ' + _depth1Y + '%, ' + _depth2X + '% ' + _depth2Y + '%';
+			elem.style.backgroundPosition = x;
+	}
+})();

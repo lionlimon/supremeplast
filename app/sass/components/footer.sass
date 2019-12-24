@@ -1,5 +1,10 @@
 .footer
 	padding-top: 25px
+	&-col
+		width: 50%
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
 	&-menu
 		background-color: #f0f8fd
 		padding-top: 72px
@@ -8,10 +13,12 @@
 		padding-bottom: 55px
 		margin-left: 0
 		margin-right: 0
+		display: flex
+		flex-wrap: wrap
 		&__block
+			width: 50%
 			&_right
 				margin-left: auto
-				margin-top: -21px
 		&__title
 			font-weight: 600
 			font-size: 16px
@@ -103,10 +110,12 @@
 @media (max-width: 1366px)
 	.footer
 		&-menu
-			padding-left: 27px
-			padding-right: 27px
+			padding-left: 42px
+			padding-right: 42px
 			padding-top: 71px
 			padding-bottom: 45px
+			&__block
+				width: 50%
 			&__list
 				&_sub
 					padding-top: 17px
@@ -139,6 +148,8 @@
 @media (max-width: 991px)
 	.footer
 		padding-top: 0
+		&-col
+			width: 100%
 		&-menu
 			&__list
 				margin-bottom: 45px
@@ -151,9 +162,13 @@
 
 @media (max-width: 767px)
 	.footer
+		&-col
+			width: 50%
+			flex-direction: column
 		&-menu
 			&__block
 				text-align: center
+				width: 100%
 				&_right
 					margin-top: 0
 			&__title
@@ -185,3 +200,8 @@
 				margin-top: 35px
 			&__phone
 				margin-top: 5px
+
+@media (max-width: 480px)
+	.footer
+		&-col
+			width: 100%
