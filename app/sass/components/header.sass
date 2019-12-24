@@ -33,6 +33,7 @@
 		visibility: hidden	
 		padding: 0
 		position: absolute
+		width: 280px
 		&-wrap
 			padding: 20px 0px
 			background-color: #f33f27
@@ -51,7 +52,7 @@
 				padding-top: 4px
 				padding-bottom: 4px
 				padding-left: 28px
-				padding-right: 65px
+				padding-right: 35px
 				font-weight: 100
 				font-size: 16px
 				letter-spacing: 0px
@@ -123,7 +124,8 @@
 		max-width: 1400px
 		padding: 0
 	&__slider-con
-		max-width: 1400px
+		max-width: 1380px
+		margin-left: 40px
 	&__phone-email
 		display: flex
 		justify-content: flex-end
@@ -175,7 +177,7 @@
 				color: white
 				text-decoration: none
 		&-icon-svg
-			height: 30px	
+			height: 23px	
 	&__slider
 		position: absolute
 		top: 0
@@ -259,7 +261,7 @@
 @media screen and (max-width: 1700px)
 	.main-header
 		&__con
-			padding: 0 15px
+			padding: 0 40px
 		&__slider-con
 			max-width: 1140px
 
@@ -272,39 +274,57 @@
 
 @media screen and (max-width: 1500px)
 	.main-header
-		&__con
-			padding: 0 15px
 		&__order-call
 			width: 118%
 			margin-left: -15px
 
 @media screen and (max-width: 1366px)
 	.main-header
+		height: 700px
 		&__nav-item
 			font-size: 14px
 		&__phone, &__email
 			font-size: 14px
+		&__phone-email
+			padding-right: 58px
 		&__order-call
 			font-size: 14px
 			height: 35px
+			width: 130%
+			margin-left: -60px
+		&__con
+			padding: 0 18px 0 40px
+		&__slider-con
+			margin-left: 81px
+		&__slider-title
+			max-width: 763px	
+			font-size: 49px
+			line-height: 57px
+			margin-top: -10px
+			margin-bottom: 50px
+			margin-top: 199px
+		&__slider-button
+			max-width: 218px
+			height: 48px
+			font-size: 14px
+		&__swiper-pagination
+			bottom: 36px
+			width: 96%
 
 @media screen and (max-width: 1300px)
 	.main-header
-		&__con
-			padding: 0 15px
-		&__order-call
-			width: 140%
-			margin-left: -33px
+		// &__order-call
+		// 	width: 140%
+		// 	margin-left: -33px
 
 @media screen and (max-width: 1199px)
 	.main-header
 		z-index: 11
-		&__con
-			padding: 0 15px
+		// &__con
+		// 	padding: 0 15px
 		&__slider-con
 			max-width: 665px
-			margin-left: auto
-			margin-right: auto
+			margin-left: 100px
 		&__order-call
 			width: 100%
 			margin-left: 0px
@@ -317,7 +337,7 @@
 		&__phone-email
 			padding-right: 0px
 		&__slider-title
-			max-width: 674px
+			max-width: 595px
 			font-size: 42px
 			line-height: 50px
 		
@@ -330,7 +350,9 @@
 				max-width: 100%
 				margin: auto
 			&-link
-				margin: auto		
+				margin: auto
+		&__frst-sub-menu
+			width: 250px		
 @media screen and (max-width: 991px)
 	.main-header
 		&__sidebar-menu
@@ -449,6 +471,8 @@
 						background-color: transparent
 					&.active
 						color: #ff9385
+		&__swiper-pagination
+			width: 95%
 
 @media screen and (max-width: 767px)
 	.main-header
@@ -458,6 +482,7 @@
 			line-height: 41px
 		&__slider-con
 			max-width: 540px
+			margin: 0 auto
 
 @media screen and (max-width: 640px)
 	.main-header
