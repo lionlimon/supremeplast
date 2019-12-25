@@ -3,12 +3,14 @@
 	padding-right: 100px
 	padding-top: 0
 	padding-bottom: 145px
+	position: relative
 	&-slide
 		&-prev
 			overflow: hidden
 	&_popular
 		padding-bottom: 0
 	&-title
+		padding-left: 20px
 		&__text
 			display: inline-block
 			font-size: 48px
@@ -29,7 +31,7 @@
 		&-nav
 			position: absolute
 			top: 7px
-			right: 25px
+			right: 115px
 			&__icon
 				path
 					transition-duration: .3s
@@ -38,7 +40,6 @@
 				border: none
 				background: none
 				height: 30px
-				width: 36px
 				background-position: center
 				background-size: cover
 				cursor: pointer
@@ -49,7 +50,7 @@
 				&:focus
 					outline: none
 			&__prev
-				margin-right: 28px
+				margin-right: 14px
 	.swiper-slide:nth-child(2n)
 		.news-item
 			background-color: #dff2f2
@@ -170,7 +171,7 @@
 			&-nav
 				position: absolute
 				top: 10px
-				right: 20px
+				right: 37px
 				&__icon
 					width: 31px
 					height: 24px
@@ -221,13 +222,15 @@
 	.news
 		padding-left: 42px
 		padding-right: 42px
+		&-title
+			padding-left: 0
 		&-slider
 			padding-left: 0
 			padding-right: 0
 			&-nav
 				position: absolute
 				top: 10px
-				right: 5px
+				right: 37px
 		&-item
 			&__bottom
 				margin-top: 116px
@@ -241,8 +244,10 @@
 	.news
 		padding-left: 15px
 		padding-right: 15px
-		padding-top: 60px
-		padding-bottom: 0	
+		padding-top: 0px
+		padding-bottom: 60px
+		&_popular
+			padding-bottom: 0	
 		&-title
 			&__text
 				font-size: 24px
@@ -250,6 +255,9 @@
 			&__img
 				margin-top: -10px
 				max-width: 54px
+		&-slider
+			&-nav
+				right: 10px
 		&-item
 			margin-top: 10px
 			padding: 15px 22px
