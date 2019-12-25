@@ -233,6 +233,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			autoplay: {
 				delay: 3000,
 			},
+			speed: 650,
 			navigation: {
 				nextEl: '.offers-slider-nav__next',
 				prevEl: '.offers-slider-nav__prev'
@@ -259,7 +260,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			autoplay: {
 				delay: 3000,
 			},
+<<<<<<< HEAD
 			speed: 550,
+=======
+			speed: 650,
+>>>>>>> 531d5fea4e51eb51bdf6a4b7b3efcec517bf1f6f
 			pagination: {
 				el: '.main-header__swiper-pagination',
 				type: 'fraction',
@@ -549,7 +554,7 @@ function validate() {
 	var checkbox = document.querySelector('.js-call-order-imit-checkbox');
 	var checkbox_error = document.querySelector('.js-error-checkbox');
 	var regname = /^[a-zа-яё]+$/i;
-	if ((name_value == "" || regname.exec(name_value) == null) && phone_value == "+7(___)___-____" && !checkbox_value) {
+	if ((name_value == "" || regname.exec(name_value) == null) && phone_value == "+7 (___) ___-____" && !checkbox_value) {
 		name_tag.classList.add('error');
 		name_error.style.display = "block";
 		phone_tag.classList.add('error');
@@ -557,7 +562,7 @@ function validate() {
 		checkbox.classList.add('error');
 		checkbox_error.style.display = "block";
 		return false;
-	} else if ((name_value == "" || regname.exec(name_value) == null) && phone_value != "+7(___)___-____" && !checkbox_value) {
+	} else if ((name_value == "" || regname.exec(name_value) == null) && phone_value != "+7 (___) ___-____" && !checkbox_value) {
 		name_tag.classList.add('error');
 		name_error.style.display = "block";
 		checkbox.classList.add('error');
@@ -573,7 +578,7 @@ function validate() {
 		name_tag.classList.remove('error');
 		name_error.style.display = "none";
 		return false;
-	} else if ((name_value == "" || regname.exec(name_value) == null) && phone_value == "+7(___)___-____" && checkbox_value) {
+	} else if ((name_value == "" || regname.exec(name_value) == null) && phone_value == "+7 (___) ___-____" && checkbox_value) {
 		phone_tag.classList.add('error');
 		phone_error.style.display = "block";
 		name_tag.classList.add('error');
@@ -581,7 +586,7 @@ function validate() {
 		checkbox.classList.remove('error');
 		checkbox_error.style.display = "none";
 		return false;
-	} else if ((name_value == "" || regname.exec(name_value) == null) && phone_value != "+7(___)___-____" && checkbox_value) {
+	} else if ((name_value == "" || regname.exec(name_value) == null) && phone_value != "+7 (___) ___-____" && checkbox_value) {
 		phone_tag.classList.remove('error');
 		phone_error.style.display = "none";
 		name_tag.classList.add('error');
@@ -589,7 +594,7 @@ function validate() {
 		checkbox.classList.remove('error');
 		checkbox_error.style.display = "none";
 		return false;
-	} else if ((name_value != "" && regname.exec(name_value) != null) && phone_value == "+7(___)___-____" && checkbox_value) {
+	} else if ((name_value != "" && regname.exec(name_value) != null) && phone_value == "+7 (___) ___-____" && checkbox_value) {
 		phone_tag.classList.add('error');
 		phone_error.style.display = "block";
 		name_tag.classList.remove('error');
@@ -597,7 +602,7 @@ function validate() {
 		checkbox.classList.remove('error');
 		checkbox_error.style.display = "none";
 		return false;
-	} else if ((name_value != "" && regname.exec(name_value) != null) && phone_value != "+7(___)___-____" && !checkbox_value) {
+	} else if ((name_value != "" && regname.exec(name_value) != null) && phone_value != "+7 (___) ___-____" && !checkbox_value) {
 		phone_tag.classList.remove('error');
 		phone_error.style.display = "none";
 		name_tag.classList.remove('error');

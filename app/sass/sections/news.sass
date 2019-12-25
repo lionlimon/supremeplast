@@ -100,17 +100,20 @@
 			max-width: 100%
 			max-height: 100%
 	&-all-items
-		display: block
+		display: inline-block
 		text-align: center
 		padding-left: 15px
 		padding-right: 15px
+		margin: 0 auto
 		margin-top: 57px
 		padding-top: 2px
 		transition-duration: .3s
+		&__block
+			text-align: center
 		&:hover
 			text-decoration: none
 			.news-all-items__icon-block
-				border-color: #1a8ea5
+				background-color: #e4f3fc
 			.news-all-items__text
 				border-color: transparent
 				color: #1a8ea5
@@ -287,7 +290,7 @@
 
 @media (max-width: 540px)
 	.news
-		padding-bottom: 0px
+		padding-bottom: 60px
 		&_popular
 			padding-bottom: 0
 		&-title
